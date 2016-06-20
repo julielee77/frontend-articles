@@ -1,0 +1,61 @@
+#position:fixed－－移动端h5爬坑（1）
+当设置position:fixed，若需要滑动页面，则会出现错位。
+
+解决办法：用absolute模拟fixed定位。
+
+[demo](https://julielee77.github.io/demo/0001.html)
+
+HTML
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+  <title>absolute stimulates fixed</title>
+  <link rel="stylesheet" href="../css/demo/0001.css">
+</head>
+<body>
+<header>
+  header fixed
+</header>
+<section class="main-wrapper">
+  <p>...超过一屏的文字</p>
+</section>
+<footer>
+  footer fixed
+</footer>
+</body>
+</html>
+```
+css部分（.styl）
+
+```
+header,footer
+  position absolute
+  left 0
+  right 0
+  background #43a08d
+  line-height 44px
+  z-index 1
+  text-align center
+  color #fff
+  font-size 20px
+header
+  top 0
+footer
+  bottom 0
+.main-wrapper
+  position absolute
+  top 0
+  bottom 0
+  padding 44px 0
+  overflow-y auto
+  -webkit-overflow-scrolling touch //ios原生滚动回调效果
+  p
+    line-height 24px
+```
+
+目前，我们团队移动端Andriod为4.0＋，因此可不考虑此bug，但ios若将弹出框等设置为fixed，使其show时会出现页面未渲染出来但DOM文档中可找到（其实是存在的，只是页面看不到，比如验出框的按钮还是可点击的）的情况，这种情况建议还是使用absolute。
+此外，position:fixed还有其它一些坑，比如其中不能有input输入框，这样调出键盘后会会出现错位。
