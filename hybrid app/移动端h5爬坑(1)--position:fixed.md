@@ -1,4 +1,4 @@
-#position:fixed－－移动端h5爬坑（1）
+#移动端h5爬坑(1)--position/fixed
 当设置position:fixed，若需要滑动页面，则会出现错位。
 
 解决办法：用absolute模拟fixed定位。
