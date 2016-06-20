@@ -45,7 +45,7 @@ package.json是项目的依赖模块，也可在编辑器中编辑
   		}
 	}
 	```
-	[package.json参数参考](http://www.mujiang.info/	translation/npmjs/files/package.json.html](http://	www.mujiang.info/translation/npmjs/files/		package.json.html)
+	[package.json参数参考](http://www.mujiang.info/translation/npmjs/files/package.json.html)
 	
 	注：对于一些转换的loader需要安装转换工具（未配置会提示并自动安	装），如less-loader和less。
 
