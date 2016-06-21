@@ -11,7 +11,7 @@
 ###使用小写颜色缩写
 可设置编辑器使用小写颜色编写，如webstorm
 
-![webstorm-hex colors](webstorm-hex colors.tiff)
+![webstorm-hex colors](images/webstorm-hex colors.tiff)
 
 ###引号
 可以省略的引号则省略
