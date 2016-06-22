@@ -5,13 +5,13 @@
 	```
 	npm install webpack -g
 	```
-1. 创建项目文件夹并进入，然后运行
+2. 创建项目文件夹并进入，然后运行
 
 	```
 	npm init #会创建一个package.json文件，并进入编辑
 	```
-package.json是项目的依赖模块，也可在编辑器中编辑
-以下示例为整理的项目中大概会用的depencies
+	package.json是项目的依赖模块，也可在编辑器中编辑
+	以下示例为整理的项目中大概会用的depencies
 
 	```
 	//package.json
@@ -49,7 +49,7 @@ package.json是项目的依赖模块，也可在编辑器中编辑
 	
 	注：对于一些转换的loader需要安装转换工具（未配置会提示并自动安	装），如less-loader和less。
 
-1. 运行npm安装
+3. 运行npm安装
 
 	```
 	npm install webpack --save-dev
@@ -65,7 +65,7 @@ package.json是项目的依赖模块，也可在编辑器中编辑
 webpack.config.js用于指出entry入口文件、编译的loaders、output输出信息、plugin方法的引入等。也可以用其它命名，但运行的时候需指出。
 
 ```
-//webpack.config.js示例
+/*webpack.config.js示例*/
 var path=require('path');//自带的处理或转化文件路径的模块
 var webpack = require('webpack');
 var ExtractTextPlugin=require('extract-text-webpack-plugin');
@@ -161,6 +161,7 @@ module.exports = {
     ]
 };
 ```
+
 [配置项参考](http://webpack.github.io/docs/configuration.html)
 
 # 采用webpack编译各类文件
@@ -257,6 +258,7 @@ webpack <entry> <output> --module-bind '后缀名=loaders列表'
 
 #Development server#
 以监听模式自动运行webpack。
+
 可与react的react-hot-loader（不刷新同步显示修改的页面）配合使用，参见<http://www.jianshu.com/p/8adf4c2bfa51>。
 
 #实例#
