@@ -23,3 +23,9 @@ a
 
 ##:before,:after
 :before,:after插入的内容默认是一个行内元素，并且在HTML源代码中无法看到，这就是为什么被称之为伪元素的理由，所以也就无法通过DOM对其进行操作（可通过改变住元素的class）。
+##line-height
+1. line-height: 1.5
+2. line-height: 150%
+3. line-height: 1.5em
+4. line-height: 36px
+建议设置line-height为数值，它的子元素将根据其font-size重新设置line-height；其它情形则由像素值或计算出的像素值直接继承。
