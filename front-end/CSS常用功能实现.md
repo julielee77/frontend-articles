@@ -1,4 +1,4 @@
-#常用功能实现
+#CSS常用功能实现
 ##子元素float后父元素有高度的方法
 1. 设置父元素float
 2. 设置父元素高度
@@ -74,7 +74,6 @@ CSS实现方法（1）
   align-items center
   display -webkit-flex
   display flex
-  height 100% unless @height
 ```
 [未知尺寸元素水平垂直居中](http://demo.doyoe.com/css/alignment/)
 
@@ -83,12 +82,11 @@ CSS实现方法（1）
 [多行文本溢出显示省略号(…)全攻略](http://www.css88.com/archives/5206) 
 
 ###单行文本省略
-
 ```
 p
   text-overflow ellipsis
   overflow hidden
-  white-space nowrap
+  white-space no-wrap
 ``` 
 
 ###多行文本省略

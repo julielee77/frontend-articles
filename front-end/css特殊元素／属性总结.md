@@ -53,4 +53,10 @@ a
  `width`, `height`, `margin`, `padding`, `border` , `top`, `right`, `bottom`, `left`, `position`, `display`, `float`, `overflow`等
 
 不会触发重新布局的属性： `transform`, `color`, `background`等
+##文字相关属性
+###word-wrap
+###word-break
+###white-space
+...
+
 
