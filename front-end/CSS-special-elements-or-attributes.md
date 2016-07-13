@@ -1,7 +1,9 @@
 #css特殊元素／属性总结
 ##inline元素
 ###高度依浏览器而异
-inline元素设置 `line-height`后，与其高度不想等，不同浏览器渲染有差异。因此，设置inline元素 `float`或子元素相对于其定位时，均会出现问题。可将元素设置为 `inline-block`以解决此类问题。
+inline元素设置 `line-height`后，与其高度不相等，不同浏览器渲染有差异。因此，设置inline元素 `float`或子元素相对于其定位时，均会出现问题。
+
+可将元素设置为 `inline-block`以解决此类问题。若需垂直居中，可再添加 `vertical-align:middle`。
 ##margin属性
 ###垂直外边距合并
 1. 两个垂直外边距相遇时，将形成一个外边距，值等于两者中的较大者。
