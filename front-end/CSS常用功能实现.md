@@ -86,7 +86,7 @@ CSS实现方法（1）
 p
   text-overflow ellipsis
   overflow hidden
-  white-space no-wrap
+  white-space nowrap
 ``` 
 
 ###多行文本省略

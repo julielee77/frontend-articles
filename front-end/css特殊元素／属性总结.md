@@ -53,10 +53,32 @@ a
  `width`, `height`, `margin`, `padding`, `border` , `top`, `right`, `bottom`, `left`, `position`, `display`, `float`, `overflow`等
 
 不会触发重新布局的属性： `transform`, `color`, `background`等
-##文字相关属性
-###word-wrap
-###word-break
-###white-space
-...
+##文字换行
+- word-wrap
+
+	`normal` 只在允许的断字点换行（默认值）
+	
+	`break-word` 在长单词或URL内部换行
+- word-break
+
+	`normal` 使用浏览器默认的换行规则
+	
+	`break-all` 允许在单词内换行
+	
+	`keep-all` 只能在半角空格或连字符处换行
+- white-space
+
+	`normal` 空白会被浏览器忽略（默认）
+	
+	`pre` 空白会被浏览器保留。其行为方式类似HTML中的pre标签
+	
+	`nowrap` 文本不会换行，文本会在同一行上继续，知道遇到<br>为止
+	
+	`pre-wrap` 保留空白符序列，但是正常地进行换行
+	
+	`pre-line` 合并空白符序列，但是保留换行符
+	
+	`inherit` 继承父级
+
 
 
