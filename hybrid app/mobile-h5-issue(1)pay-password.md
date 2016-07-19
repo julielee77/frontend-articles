@@ -93,23 +93,23 @@
 	```
 
 
-2. ###event.returnValue=false;
-	可在keydown方法中禁止键盘输入。移动端支持 `event.returnValue=false` 和 `event.preventDefault()`。
+2. ###event.preventDefault();
+	可在keydown方法中禁止键盘输入。移动端阻止默认事件支持 `event.preventDefault()`和 `event.returnValue=false`。
 	
 	**密码输入keydown监听方法**
 	
 	```
 	pwdKeyDown: function (event) {
-	      var returnVal = true;
-	      if (event.keyCode >= 48 && event.keyCode <= 57) { //0-9
-	        (this.pwd !== null && this.pwd !== undefined && this.pwd.length == this.pwdLength) && (returnVal = false); //密码已输完,禁止继续输入
-	      } else if (event.keyCode === 13) {//enter
-	        this.pwd !== null && this.pwd !== undefined && this.pwd.length === this.pwdLength && this.submitPlan();//若已输完6位,则enter提交
-	      } else if (event.keyCode !== 8 && event.keyCode !== 46) {//非 delete & backspace
-	        returnVal = false;
-	      }
-	      event.returnValue = returnVal;
-	    }
+      var flag = true;
+      if (event.keyCode >= 48 && event.keyCode <= 57) { //0-9
+        (this.pwd !== null && this.pwd !== undefined && this.pwd.length == this.pwdLength) && (flag = false); //密码已输完,禁止继续输入
+      } else if (event.keyCode === 13) { //enter
+        this.pwd !== null && this.pwd !== undefined && this.pwd.length === this.pwdLength && this.submitPlan(); //若已输完6位,则enter提交
+      } else if (event.keyCode !== 8 && event.keyCode !== 46) { //非 delete & backspace
+        flag = false;
+      }
+      !flag && event.preventDefault();
+    }
 	```
 3. ###关于document.activeElement.blur();
 	`document.activeElement`可获取当前聚焦元素。
