@@ -114,9 +114,12 @@
 3. ###关于document.activeElement.blur();
 	`document.activeElement`可获取当前聚焦元素。
 
-	本来是为了解决ios自动focus()问题，但直接调用javascript的focus()方法后，document.activeElement获取到新设置的元素，并没有调出键盘。这应该是ios的bug，查找到的方法是，**在click方法中立即focus()， 不能有在timeout／异步请求等延时之后**。
-4. ###ios自动focus()实现
-	在ios中，element.focus()需要在click方法中立即调用。若需根据HTTP请求后的结果判断是否要focus()，故需改用同步请求。同时，不能在`timeout`方法后focus()，原理同异步请求。
+	本来是为了解决ios自动focus()问题（这应该是ios的bug）查找到的，但不支持focus()的环境先调用blur()()也并无作用。因此elemnt.blur()基本不用。
+	
+4. ###ios自动focus()实现		
+	ios中调用focus()方法，document.activeElement会改变为设置的元素，但并不会因此调出键盘。解决方法为**在click方法中立即调用focus()， 不能有在timeout／异步请求等延时之后**。
+	
+	若需根据HTTP请求后的结果判断是否要focus()，故需改用同步请求。同时，不能在`timeout`方法后focus()，原理同异步请求。
 	
 	同时，input设置autofocus对ios也是无效的。
 	
