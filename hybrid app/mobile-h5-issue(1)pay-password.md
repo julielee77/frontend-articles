@@ -3,7 +3,8 @@
 
 1. `input[type=tel]`与`input[type=number]`
 2. `-webkit-text-security` mobile延迟
-3. ios `focus()`方法问题
+3. keydown事件阻止键入
+4. ios `focus()`方法问题
 
 **需求描述**
 
@@ -93,7 +94,7 @@
 
 
 2. ###event.returnValue=false;
-	在keydown方法中禁止键盘输入
+	可在keydown方法中禁止键盘输入。移动端支持 `event.returnValue=false` 和 `event.preventDefault()`。
 	
 	**密码输入keydown监听方法**
 	
@@ -113,9 +114,11 @@
 3. ###关于document.activeElement.blur();
 	`document.activeElement`可获取当前聚焦元素。
 
-	本来是为了解决ios自动focus()问题，但直接调用javascript的focus()方法后，document.activeElement获取到新设置的元素，并没有调出键盘。这应该是ios的bug，查找到的方法是，在click方法中立即focus()， 不能有在timeout／异步请求等延时之后。
+	本来是为了解决ios自动focus()问题，但直接调用javascript的focus()方法后，document.activeElement获取到新设置的元素，并没有调出键盘。这应该是ios的bug，查找到的方法是，**在click方法中立即focus()， 不能有在timeout／异步请求等延时之后**。
 4. ###ios自动focus()实现
-	需要在click方法中触发，若需根据HTTP请求后的结果判断是否要focus()，则需改用同步请求。同时，不能在`timeout`方法后focus()，原理同异步请求。
+	在ios中，element.focus()需要在click方法中立即调用。若需根据HTTP请求后的结果判断是否要focus()，故需改用同步请求。同时，不能在`timeout`方法后focus()，原理同异步请求。
+	
+	同时，input设置autofocus对ios也是无效的。
 	
 	**判断显示输入密码弹出框函数**
 	
