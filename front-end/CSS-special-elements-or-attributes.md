@@ -83,6 +83,12 @@ a
 	`pre-line` 合并空白符序列，但是保留换行符
 	
 	`inherit` 继承父级
+	
+##z-index
+默认值为auto。建议：非弹窗元素的z-index不大于2，避免层级混乱。
+
+ 更多详细内容参见[张鑫旭z-index－幕客视频](http://www.imooc.com/learn/643)
+	
 
 
 
