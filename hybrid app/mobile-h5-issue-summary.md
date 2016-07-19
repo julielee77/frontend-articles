@@ -166,7 +166,15 @@ pc或手机的chrome浏览器中浏览器会根据表单的name自动填充域�
 此方法可解决pc端chrome浏览器问题，效果是浏览器会弹出保存密码modal，但只会填充到隐藏的输入框里。
 
 但mobile的chrome浏览器仍然会填充到显示出的输入框中，因此职能将from去掉以结局。
+##input与line-height
+注：input元素设置line-height控制高度时，mx2的光标高度等于line-height，可改为
 
+```
+input[type=tel]{
+	height:44px;
+	vertical-align:middle;
+}
+```
 
   
 
