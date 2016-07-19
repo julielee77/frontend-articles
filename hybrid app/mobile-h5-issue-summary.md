@@ -67,7 +67,7 @@
 ##[disabled]
 ```input[type=button][disabled]
   opacity 1```
-重设ios渲染的opacity=0.4
+重设ios渲染的默认opacity=0.4
 ##1px问题
 原生1px等于物理1px，但web的1px则依 `devicePixelRatio`而定。因此，在Retina屏中的1px往往是物理1px的数倍，参照一般 `devicePixelRatio=2`可实现近似1px（当然也可以根据不同 `devicePixelRatio`更精细地适配）
 ```gray-4 = #e7e7e7 //间隔线vendor(prop, args...)
@@ -175,6 +175,12 @@ input[type=tel]{
 	vertical-align:middle;
 }
 ```
+##ios不支持focus()
+ios中调用focus()方法，document.activeElement会改变为设置的元素，但并不会因此调出键盘。解决方法为**在click方法中立即调用focus()， 不能有在timeout／异步请求等延时之后**。
+
+详细示例参见[移动端h5问题探索(1)支付密码输入框](https://github.com/JulieLee77/frontend-articles/blob/master/hybrid%20app/mobile-h5-issue(1)pay-password.md)
+##获取设备可用高度
+`screen.avialHeight` 包含了webview渲染的标题栏，可使用 `window.innerHeight`获取。
 
   
 

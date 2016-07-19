@@ -35,63 +35,60 @@
 	  </div>
 	</section>
 	```
-	由于在显示弹出框时就必须focus输入框，而不能有timeout或异步请求，因此input输入框应一直在DOM中，显示在页面视线外。
-	
 	**css密码部分**
 	
 	```
 	//支付密码
 	input.pwdInput[type=tel]
-	  position fixed
-	  top 50%
-	  left -100%
-	  padding 0
-	  border none
-	  color transparent
-	  background transparent
-	  &:focus
-	    outline none
+	position fixed
+	top 50%
+	left -100%
+	padding 0
+	border none
+	color transparent
+	background transparent
+	&:focus
+	  outline none
 	
 	.pwd .modal
-	  .pwd-box
-	    width 100%
-	    margin 0 auto
-	    padding-top gap-12
-	    text-align center
-	    @extend .border-top-1px
-	    ul
-	      li
-	        box-sizing border-box
+	.pwd-box
+	  width 100%
+	  margin 0 auto
+	  padding-top gap-12
+	  text-align center
+	  @extend .border-top-1px
+	  ul
+	    li
+	      box-sizing border-box
+	      display inline-block
+	      width 16.667%
+	      border-top 1px solid gray-4
+	      border-right 1px solid gray-4
+	      border-bottom 1px solid gray-4
+	      &:after
+	        content ''
 	        display inline-block
-	        width 16.667%
-	        border-top 1px solid gray-4
-	        border-right 1px solid gray-4
-	        border-bottom 1px solid gray-4
-	        &:after
-	          content ''
-	          display inline-block
-	          vertical-align middle
-	          width 0
-	          height 100%
-	        span
-	          display inline-block
-	          vertical-align middle
-	          text-align center
-	          width 10px
-	          height 10px
-	          border-radius 999px
-	          background gray-8
-	        &:not(:first-child)
-	          border-left none
-	        &:first-child
-	          border-left 1px solid gray-4
-	          border-top-left-radius 2px
-	          border-bottom-left-radius 2px
-	        &:last-child
-	          border-top-right-radius 2px
-	          border-bottom-right-radius 2px	
+	        vertical-align middle
+	        width 0
+	        height 100%
+	      span
+	        display inline-block
+	        vertical-align middle
+	        text-align center
+	        width 10px
+	        height 10px
+	        border-radius 999px
+	        background gray-8
+	      &:not(:first-child)
+	        border-left none
+	      &:first-child
+	        border-left 1px solid gray-4
+	        border-top-left-radius 2px
+	        border-bottom-left-radius 2px
+	      &:last-child
+	        border-top-right-radius 2px
+	        border-bottom-right-radius 2px	
 	```
-
 
 2. ###event.preventDefault();
 	可在keydown方法中禁止键盘输入。移动端阻止默认事件支持 `event.preventDefault()`和 `event.returnValue=false`。
@@ -117,7 +114,7 @@
 	本来是为了解决ios自动focus()问题（这应该是ios的bug）查找到的，但不支持focus()的环境先调用blur()()也并无作用。因此elemnt.blur()基本不用。
 	
 4. ###ios自动focus()实现		
-	ios中调用focus()方法，document.activeElement会改变为设置的元素，但并不会因此调出键盘。解决方法为**在click方法中立即调用focus()， 不能有在timeout／异步请求等延时之后**。
+	ios中调用focus()方法，document.activeElement会改变为设置的元素，但并不会因此调出键盘。解决方法为**在click方法中立即调用focus()， 不能有在timeout／异步请求等延时之后**。因此input输入框应一直在DOM中，显示在页面视线外。
 	
 	若需根据HTTP请求后的结果判断是否要focus()，故需改用同步请求。同时，不能在`timeout`方法后focus()，原理同异步请求。
 	
