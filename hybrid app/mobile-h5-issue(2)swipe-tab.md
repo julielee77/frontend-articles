@@ -20,7 +20,6 @@ touch事件只能用addEventListener方式绑定。
 4. ###touchcancel
 触摸取消（官方无详细说明，作为不支持touchend时的替代方案）
 
-	
 注：touchend部分手机不支持，如小米4，可用touchcanel代替（iphone SE不支持，但支持touchend）。
 ##每个touch事件都包含了3个touch对象列表
 
