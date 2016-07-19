@@ -78,6 +78,10 @@ CSS实现方法（1）
 ```
 [未知尺寸元素水平垂直居中](http://demo.doyoe.com/css/alignment/)
 
+实现方法（3）－－display:table-cell
+
+支持IE8+/chrome/firefox，利用td的vertical-align:middle
+
 ##文字省略后加省略号
 
 [多行文本溢出显示省略号(…)全攻略](http://www.css88.com/archives/5206) 
