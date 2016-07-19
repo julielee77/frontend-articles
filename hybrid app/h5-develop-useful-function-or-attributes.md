@@ -68,6 +68,7 @@ textarea,input{
 ```
 去掉`textrea`, `input`的默认样式（如ios的圆角及内阴影）。对于 `radio`，`checkbox`可解决移动端不能设置大小（扩展选取范围）。
 ##user-select:none
+禁止长按选取／复制
 
 ```
 body{
@@ -75,7 +76,6 @@ body{
 	user-select:none;
 }
 ```
-去掉文本可选取复制。
 ##pointer-events:none;
 决定是否可以穿越绝对定位元素，触发遮挡元素的某些行为。
 ##-webkit-touch-callourt:none;

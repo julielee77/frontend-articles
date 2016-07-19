@@ -8,10 +8,10 @@ API `length`, `item`, `add`, `remove`, `contains`, `toggle`
 ##阻止事件默认行为
 - event.preventDefault()
 
-	firefox/chrome
+	firefox/chrome／IE9+
 - event.returnValue=false
 
-	IE8-/chrome
+	IE/chrome
 - return false
 	查找到的此方法，但经测试均不支持
 
@@ -20,3 +20,5 @@ API `length`, `item`, `add`, `remove`, `contains`, `toggle`
 `document.activeElement`可获取当前聚焦元素。
 
 `element.blur()`基本不会用，因为当需要改变聚焦元素直接调用 `element.focus()`即可，对于不支持直接 `focus()`的环境先调用 `blur()`也解决不了（如ios）。
+##window.reload()
+刷新页面
