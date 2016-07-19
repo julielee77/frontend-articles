@@ -7,7 +7,8 @@
 2. 阻止ios左右滑默认事件
 
 ##touch事件
-	touch事件只能用addEventListener方式绑定。
+touch事件只能用addEventListener方式绑定。
+
 1. ###touchstart
 	触摸开始
 2. ###touchmove
