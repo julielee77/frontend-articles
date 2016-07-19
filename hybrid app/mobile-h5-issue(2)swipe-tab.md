@@ -11,12 +11,15 @@ touch事件只能用addEventListener方式绑定。
 
 1. ###touchstart
 	触摸开始
+	
 2. ###touchmove
 	触摸拖动
 	
 	可在此阻止页面滚动 `event.preventDefault();`
+	
 3. ###touchend
 	触摸结束	
+	
 4. ###touchcancel
 触摸取消（官方无详细说明，作为不支持touchend时的替代方案）
 
@@ -25,8 +28,10 @@ touch事件只能用addEventListener方式绑定。
 
 1. ###touches
 	当前屏幕上所有触摸点的列表
+	
 2. ###targetTouches
 	targetTouches当前对象上所有触摸点的列表
+	
 3. ###changedTouches
 	涉及当前事件的触摸点的列表
 	
