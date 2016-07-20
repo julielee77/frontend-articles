@@ -179,8 +179,8 @@ input[type=tel]{
 ios中调用focus()方法，document.activeElement会改变为设置的元素，但并不会因此调出键盘。解决方法为**在click方法中立即调用focus()， 不能有在timeout／异步请求等延时之后**。
 
 详细示例参见[移动端h5问题探索(1)支付密码输入框](https://github.com/JulieLee77/frontend-articles/blob/master/hybrid%20app/mobile-h5-issue(1)pay-password.md)
-##获取设备可用高度
-`screen.avialHeight` 包含了webview渲染的标题栏，可使用 `window.innerHeight`获取。
+##获取设备可用尺寸
+`screen.avialHeight` 包含了webview渲染的标题栏，应使用 `window.innerHeight`获取文档显示区的高度。
 
   
 

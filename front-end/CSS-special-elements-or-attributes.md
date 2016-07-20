@@ -44,7 +44,7 @@ a
 
 建议设置 `line-height`为数值，它的子元素将根据其 `font-size`重新设置 `line-height`；其它情形则由像素值或计算出的像素值直接继承。
 ##overflow
-overflow规定当内容溢出元素时发生的事情。值visible（默认）/
+overflow规定当内容溢出元素时发生的事情。值visible（默认）/hidden/scroll/auto/inherit（IE8-不支持）。
 
 
 如果 `overflow`被设置为 `hidden`，元素的内容会在元素的边界处剪裁，不过不会提供滚动接口使用户访问到超出剪裁区域的内容。
