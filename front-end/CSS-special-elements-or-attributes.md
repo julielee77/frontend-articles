@@ -17,6 +17,7 @@ inline/inline-block元素间的空格／回车会形成一定的默认margin。
 
 ##border属性
 `border:none` 不渲染，但有兼容性问题（IE6/7），可同时设置`background:none`。
+
 `border:0` 会渲染，因此会占用内存，但无兼容问题。
 ##outline属性
 位于边框边缘的外围，不占据空间。
