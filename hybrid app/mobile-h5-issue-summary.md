@@ -165,7 +165,7 @@ pc或手机的chrome浏览器中浏览器会根据表单的name自动填充域�
 ```
 此方法可解决pc端chrome浏览器问题，效果是浏览器会弹出保存密码modal，但只会填充到隐藏的输入框里。
 
-但mobile的chrome浏览器仍然会填充到显示出的输入框中，因此职能将from去掉以结局。
+但mobile的chrome浏览器仍然会填充到显示出的输入框中，因此只能将from去掉以结局。
 ##input与line-height
 注：input元素设置line-height控制高度时，mx2的光标高度等于line-height，可改为
 
@@ -178,7 +178,7 @@ input[type=tel]{
 ##ios不支持focus()
 ios中调用focus()方法，document.activeElement会改变为设置的元素，但并不会因此调出键盘。解决方法为**在click方法中立即调用focus()， 不能有在timeout／异步请求等延时之后**。
 
-详细示例参见[移动端h5问题探索(1)支付密码输入框](https://github.com/JulieLee77/frontend-articles/blob/master/hybrid%20app/mobile-h5-issue(1)pay-password.md)
+详细示例参见[移动端h5问题探索(1)支付密码输入框](https://github.com/JulieLee77/frontend-articles/blob/master/hybrid%20app/mobile-h5-issue1-pay-password.md)
 ##获取设备可用尺寸
 `screen.avialHeight` 包含了webview渲染的标题栏，应使用 `window.innerHeight`获取文档显示区的高度。
 

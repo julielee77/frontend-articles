@@ -86,4 +86,4 @@ body{
 
 对其它type的input设置此属性时，移动设备会有较长延迟（即输入时先明码显示，之后一会儿才转换为disc）
 
-详细示例及说明参见 [移动端h5问题探索(1)支付密码输入框](https://github.com/JulieLee77/frontend-articles/blob/master/hybrid%20app/mobile-h5-issue(1)pay-password.md)
+详细示例及说明参见 [移动端h5问题探索(1)支付密码输入框](https://github.com/JulieLee77/frontend-articles/blob/master/hybrid%20app/mobile-h5-issue1-pay-password.md)
