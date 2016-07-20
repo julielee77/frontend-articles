@@ -87,7 +87,7 @@ a
 ##z-index
 默认值为auto。建议：非弹窗元素的z-index不大于2，避免层级混乱。
 
- 更多详细内容参见[张鑫旭z-index－幕客视频](http://www.imooc.com/learn/643)
+ 更多详细内容参见[张鑫旭z-index－慕课视频](http://www.imooc.com/learn/643)
 	
 
 
