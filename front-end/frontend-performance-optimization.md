@@ -4,6 +4,7 @@
 缓存无疑是非常重要的，在一个项目中一般以做好各级的缓存，而对于前端来说需要关注浏览器缓存以及localStorage/sessionStorage能做到的一些事情（如缓存常用js文件／图片等）。
 
 推荐阅读
+强烈推荐[AlloyTeam的web缓存机制系列](http://www.alloyteam.com/2012/03/web-cache-1-web-cache-overview/)的六篇文章
 
 [浅谈Web缓存](http://www.alloyteam.com/2016/03/discussion-on-web-caching/?utm_source=tuicool&utm_medium=referral) 比较系统地介绍缓存机制
 

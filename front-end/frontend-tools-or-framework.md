@@ -2,10 +2,13 @@
 ##性能兼容相关
 ###性能支持检测
 - modernizr.js
+
 	h5/css3/ES5特征检测，可根据监测结果做不同处理
 - [can I use](http://caniuse.com)
+
 	各版本浏览器对css/js性能的支持性
 	
+###		
 ##代码校验器
 ###JSHint
 javascript校验工具[参考](http://www.open-open.com/lib/view/open1354349336991.html)
