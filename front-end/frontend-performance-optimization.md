@@ -30,12 +30,12 @@
 	  opacity .6
 	```
 3. 十六进制颜色使用小写缩写形式
-4. 
+
 	可设置编辑器使用小写颜色编写，如webstorm
 		
 	![webstorm-hex colors](images/webstorm-hex colors.tiff)
 4. 引号
-5. 
+
 	可以省略的引号则省略
 	
 	```
@@ -54,13 +54,13 @@
 
 Andy Ford是HTML和CSS方面的专家，最近写了一篇文章：[Order of the Day: CSS Properties](http://aloestudios.com/2009/02/order-of-the-day-css-properties/) . 文章推荐的CSS书写顺序为：
 
-1. Display & Flow
-2. Positioning
-3. Dimensions
-4. Margins, Padding, Borders, Outline
-5. Typographic Styles
-6. Backgrounds
-7. Opacity, Cursors, Generated Content
+1. Display & Flow `display` `float` `clear`
+2. Positioning `position` `top/right/bottom/left`
+3. Dimensions `z-index `
+4. Margins, Padding, Borders, Outline `box-sizing` `margin/padding/border/outline`
+5. Typographic Styles `font` `text-*` `color`
+6. Backgrounds `background`
+7. Opacity, Cursors, Generated Content `opacity` `coursor` `content` ^^^
 
 Sublime Text编辑器可安装 [CSSComb](http://csscomb.com/docs)
 
