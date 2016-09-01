@@ -26,3 +26,7 @@ chrome前端插件
 ##浏览器兼容性测试
 [Browser Sandbox](http://spoon.net/browsers/)(目前只支持windows版本－－2016.06注)
 
+//TODO
+
+uglify-js
+
