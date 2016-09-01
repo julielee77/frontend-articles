@@ -19,11 +19,18 @@
 	- 压缩css和js文件 
 	
 		常用工具YUI Compressor, uglify-js,jsMin以及一些loader
-	- 不要在文档中缩放图像		
+	- **img** 不要在文档中缩放图像	
+	- **HTML** 非同源url或协议相同可省略，写作`//:`	
+	- **css**
+		- 简写属性
+		- 可省略引号或用单引号
+		- 0px等省略单位
+		- 纯小数可省略0
+		- 十六进制颜色使用小写缩写形式 `#69f`
+	- **js** 使用单引号		
 
 ##二. HTML优化
-1. ###节省字节
-	- 非同源url或协议相同可省略，写作`//:`
+
 
 ##三. CSS优化
 1. 慎重选择高消耗的样式(Expensive styles)	
@@ -65,35 +72,6 @@
 	Sublime Text编辑器可安装 [CSSComb](http://csscomb.com/docs) 
 	
 	兼容前缀：（1）标准的属性放在后面（2）IE无需写，它使用的是标准属
-5. ###节省字节
-	- 简写属性
-	- 可省略引号或用单引号
-	- 0px等省略单位
-	- 纯小数可省略0
-	
-		```
-		.mask
-		  opacity .6
-		```
-	- 十六进制颜色使用小写缩写形式
-	
-		可设置编辑器使用小写颜色编写，如webstorm
-			
-		![webstorm-hex colors](images/webstorm-hex colors.tiff)
-	- 引号
-	
-		可以省略的引号则省略
-		
-		```
-		input[type=button]
-		  ...
-		```
-		不可省略的可使用单引号
-		
-		```
-		div:after
-		  content ''		  
-		```
 
 3. ###css lint
 	- 加载性能  不要用import、压缩等，主要是减少文件体积、减少阻塞加载、提高并发方面
@@ -102,7 +80,16 @@
 	- 可维护性、健壮性
 
 ##四. javascript优化
-1. ###节省字节
-	- 使用单引号
+1. DOM的多个读操作，应放在一起。两个读操作间，不要插入写操作
+2. 如果某个样式是通过重排得到的，那么最好缓存结果。
+3. 不要一条条地改变样式，而要通过改变class或csstext属性，一次性改变样式。
+4. 最好使用离线DOM，而不是真实的网面DOM来改变元素样式。 如docuementFragment对象
+5. 先将元素设为display:none，然后对这个节点进行n次DOM操作，最后回复显示。
+6. position:absolute或fixed的元素，重排开销会较小
+7. 只在必要的时候，才将元素的display属性为可见
+8. 使用虚拟DOM的脚本库，比如React等。
+9. 使用window.requestAnimationFrame()、window.requestIdleCallback()调节重新渲染
+requestAnimationFrame android 4.4.4以上支持  requestIdleCallback只有chrome支持
+
 待续－－
 
