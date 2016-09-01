@@ -125,11 +125,7 @@ CSS权值：通用*0.01 继承0.1 标签1  类10  id100  !Important最高
 - 表格元素可继承： `border-collapse`
 - 不可继承的： `display`、`margin`、`border`、`padding`、`background`、`height`、`min-height`、`max-height`、`width`、`min-width`、`max-width`、`overflow`、`position`、`left`、`right`、`top`、 `bottom`、`z-index`、`float`、`clear`、`table-layout`、`vertical-align`、`page-break-after`、 `page-bread-before`和`unicode-bidi`
 
-##css动画
-改变layout相关属性会触发重新布局，动画中应避免。如：
- `width`, `height`, `margin`, `padding`, `border` , `top`, `right`, `bottom`, `left`, `position`, `display`, `float`, `overflow`等
-
-不会触发重新布局的属性： `transform`, `color`, `background`等
+总结：文本／列表相关属性可继承
 ##box-model
 - ###inline元素
 	**高度依浏览器而异**
@@ -145,21 +141,21 @@ CSS权值：通用*0.01 继承0.1 标签1  类10  id100  !Important最高
 	- `line-height: 36px`
 
 	建议设置 `line-height`为数值，它的子元素将根据其 `font-size`重新设置 `line-height`；其它情形则由像素值或计算出的像素值直接继承。
-- ###margin属性
-	**垂直外边距合并**
+- ###margin
+	**垂直外边距向上合并**
 	1. 两个垂直外边距相遇时，将形成一个外边距，值等于两者中的较大者。
 	2. 子元素的 `margin-top`会赋给最近一层有效 `border-top`或 `padding-top`的父级（IE的 `haslayout`渲染则无此问题）
 
 	**inline/inline-block元素间的margin**
 	inline/inline-block元素间的空格／回车会形成一定的默认margin。
 	（回车可使用 `<!-- -->`消除）
-- ###border属性
+- ###border
 	`border:none` 不渲染，但有兼容性问题（IE6/7），可同时设置`background:none`。
 	
 	`border:0` 会渲染，因此会占用内存，但无兼容问题。
-- ###outline属性
+- ###outline
 	位于边框边缘的外围，不占据空间。
-	IE／Firefox/chrome默认点击 `a`/ `button`会出现一个轮廓框。 
+	IE／Firefox/chrome默认点击 `a`/ `button`会出现一个轮廓框。 (现代浏览器已解决)
 	 `outline`的none值与0值表现基本同 `border`，但考虑到用户体验PC端不建议去除。
 	
 	```
@@ -183,7 +179,7 @@ CSS权值：通用*0.01 继承0.1 标签1  类10  id100  !Important最高
 	
 	如果 `overflow`被设置为 `hidden`，元素的内容会在元素的边界处剪裁，不过不会提供滚动接口使用户访问到超出剪裁区域的内容。
 	
-##font
+##font/text
 - ###文字换行
 	- word-wrap
 	
@@ -210,8 +206,11 @@ CSS权值：通用*0.01 继承0.1 标签1  类10  id100  !Important最高
 		`pre-line` 合并空白符序列，但是保留换行符
 		
 		`inherit` 继承父级 
-
-
-
-
+##不常用css属性
+###-webkit-font-smoothing:anialiased;
+设置字体的抗锯齿或平滑度	
+###-webkit-backface-visibility:hidden;
+当元素不面向屏幕时是否可见
+###transform-style:perserve-3d;
+存在兼容性问题	
 
