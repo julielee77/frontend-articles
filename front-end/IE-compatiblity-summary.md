@@ -3,9 +3,9 @@
 ##概况
 IE9+基本已和chrome兼容性差不多，而IE7-市场占有率基本可不考虑，因此一般考虑的是IE8的兼容性。
 
-目前最新的windows10默认浏览器已换成spartan，而IE11将不做重大修改，预示着微软已自动放弃IE浏览器。
+目前最新的windows10默认浏览器已换成spartan，而IE11将不做重大修改，这预示着微软已自动放弃IE浏览器。
 
-jquery框架1.X版本支持IE7-，解决了很多IE兼容性问题，且便于操作DOM。其2.X版本支持IE8+。
+补充：jquery框架1.X版本支持IE7-，解决了很多IE兼容性问题，且便于操作DOM。其2.X版本支持IE8+。
 ##HTML/CSS兼容情况
 IE8-一般不支持HTML5和CSS3
 ##javascript兼容情况
