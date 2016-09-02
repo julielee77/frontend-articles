@@ -30,7 +30,7 @@ IE8-一般不支持HTML5和CSS3
 	
 		`querySeletor`/ `querySeletorAll` IE7~10只支持CSS2选择器，IE6-不支持。
 		
-		`getElementsByClassName` IE-不支持	
+		`getElementsByClassName` IE10-不支持	
 	- 核心DOM操作
 		setAtrribute IE7-不支持，操作属性多使用HTML DOM方法。
 		<table>
@@ -89,6 +89,14 @@ IE8-一般不支持HTML5和CSS3
 		  </tr>
 		</table> 
 		setCapture/releaseCapture IE8-专用
+	- 事件绑定
+	    DOM 2级事件
+		```
+		myBtn.attachEvent('onclick',myFunc);  //IE8-
+		myBtn.addEventListener('click',myFunc,?capture); //其它
+		```	
 3. ajax
-	解决IE6-不兼容Ajax的XMLHttpRequest（其它浏览器），使用ActiveXobject	
+	解决IE6-不兼容Ajax的XMLHttpRequest（其它浏览器），使用ActiveXobject
+4. window.close()
+	IE下提示是否需要关闭，ff无法执行并报错（不能关闭非脚本打开的页面）		
 
