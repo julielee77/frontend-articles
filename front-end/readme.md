@@ -7,4 +7,4 @@
 - [前端实用工具／库](frontend-tools-or-framework.md)
 - [webpack构建开发环境](webpack-deploy-develop-environment.md)
 - [Vue实践总结](vue-issue.md)
-- [IE兼容总结](IE-compatiblity-summary.md)
+- [IE兼容总结](IE-compatibility-summary.md)
