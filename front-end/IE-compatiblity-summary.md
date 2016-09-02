@@ -25,14 +25,15 @@ IE8-一般不支持HTML5和CSS3
 		IE不支持元素树。对于节点树，IE与其它浏览器的解析不同，其它浏览器会包含Text节点。
 		`elment.childNodes` IE6～8支持，IE9+和chrome不支持。
 	- 查找元素
+	
 		`querySeletor`/ `querySeletorAll` IE7~10只支持CSS2选择器，IE6-不支持。
 		`getElementsByClassName` IE-不支持	
 	- 核心DOM操作
 		setAtrribute IE7-不支持，操作属性多使用HTML DOM方法。
 		<table>
 		  <tr>
-		    <td>其它浏览器</td>
-		    <td>IE8-</td>
+		    <th>其它浏览器</th>
+		    <th>IE8-</th>
 		  </tr>
 		  <tr>
 		    <td>currentStyle</td>
@@ -45,16 +46,19 @@ IE8-一般不支持HTML5和CSS3
 		</table>	
 2. DOM事件
 	- 事件模型
+	
 		IE使用冒泡事件模型，其它现代浏览器使用捕获冒泡事件模型。
+		```
 		function XXX(event){
 			event= event||window.event;//firefox在js事件中无event对象，需由参数传递而来
 		}
+		```
 	- 事件及属性
 		<table>
 		  <tr>
-			<td></td>
-			<td>其它浏览器</td>
-			<td>IE</td>
+			<th></th>
+			<th>其它浏览器</th>
+			<th>IE</th>
 		  </tr>
 		  <tr>
 		    <td>阻止默认事件</td>
