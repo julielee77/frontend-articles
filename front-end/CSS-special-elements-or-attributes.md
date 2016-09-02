@@ -145,6 +145,8 @@ CSS权值：通用*0.01 继承0.1 标签1  类10  id100  !Important最高
 	**垂直外边距向上合并**
 	1. 两个垂直外边距相遇时，将形成一个外边距，值等于两者中的较大者。
 	2. 子元素的 `margin-top`会赋给最近一层有效 `border-top`或 `padding-top`的父级（IE的 `haslayout`渲染则无此问题）
+	
+		解决方法：（1）父元素设置透明 `border-top`（2）改用 `padding-top`(3)bootstrap方法 `:before{content:"",display:table;}`
 
 	**inline/inline-block元素间的margin**
 	inline/inline-block元素间的空格／回车会形成一定的默认margin。
