@@ -1,4 +1,5 @@
 #前端性能优化
+为了优化网页加载速度，以及便于扩展或维护等，通常需要优化前端代码或配置。
 ##一. 优化总则
 1. ###缓存
 	缓存无疑是非常重要的，在一个项目中一般已做好各级的缓存（由客户端和后端），而对于前端来说需要关注浏览器缓存以及localStorage/sessionStorage能做到的一些事情（如缓存常用js文件／图片等）。
@@ -12,7 +13,7 @@
 	[浅谈浏览器http的缓存机制](http://www.360doc.com/content/16/0405/10/30136251_547971176.shtml)
 	
 	[关于Web静态资源缓存自动更新的思考与实践](http://web.jobbole.com/82838/)
-2. 尽量减少HTTP请求的个数
+2. ###尽量减少HTTP请求的个数
 	- CSS sprite 合并多个背景图到一个单独图像（单张不高于200k）	
 	- 使用一些loader，合并js/css，并按需加载
 3. ###节省字节
@@ -30,7 +31,9 @@
 	- **js** 使用单引号		
 
 ##二. HTML优化
-
+1. ###HTML属性顺序
+	HTML属性应当按照以下顺序排列，确保代码的易读性
+	class  id,name data-*  src,for,type,href  title,alt  aria-*,role
 
 ##三. CSS优化
 1. 慎重选择高消耗的样式(Expensive styles)	
