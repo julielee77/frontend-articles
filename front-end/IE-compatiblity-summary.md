@@ -19,7 +19,7 @@ IE8-一般不支持HTML5和CSS3
 	str[0]//IE7-不支持 =>str.charAt(0)
 	```
 
-##DOM
+###DOM
 1. DOM元素
 	- 节点树和元素树
 	
