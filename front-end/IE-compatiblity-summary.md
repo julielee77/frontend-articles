@@ -13,6 +13,7 @@ IE8-一般不支持HTML5和CSS3
 **IE8-一般不支持ES5以上。**
 
 1. 字符串元素访问
+
 	```	
 	var str='abc';
 	str[0]//IE7-不支持 =>str.charAt(0)
