@@ -97,7 +97,9 @@ IE8-一般不支持HTML5和CSS3
 		myBtn.addEventListener('click',myFunc,?capture); //其它
 		```	
 3. ajax
+
 	解决IE6-不兼容Ajax的XMLHttpRequest（其它浏览器），使用ActiveXobject
 4. window.close()
+
 	IE下提示是否需要关闭，ff无法执行并报错（不能关闭非脚本打开的页面）		
 
