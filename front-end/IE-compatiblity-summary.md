@@ -90,6 +90,7 @@ IE8-一般不支持HTML5和CSS3
 		</table> 
 		setCapture/releaseCapture IE8-专用
 	- 事件绑定
+	
 	    DOM 2级事件
 		```
 		myBtn.attachEvent('onclick',myFunc);  //IE8-
