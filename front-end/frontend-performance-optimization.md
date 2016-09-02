@@ -34,6 +34,7 @@
 ##二. HTML优化
 1. ###HTML属性顺序
 	HTML属性应当按照以下顺序排列，确保代码的易读性
+	
 	class  id,name data-*  src,for,type,href  title,alt  aria-*,role
 
 ##三. CSS优化
