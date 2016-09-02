@@ -36,6 +36,8 @@
 	class  id,name data-*  src,for,type,href  title,alt  aria-*,role
 
 ##三. CSS优化
+推荐参考[CSS Guide](http://cssguidelin.es) By [Harry Roberts](http://csswizardry.com/work/)的规范。
+
 1. 慎重选择高消耗的样式(Expensive styles)	
 	- 合理安排selector
 	- 高消耗属性（绘制前浏览器需要进行大量计算）
