@@ -1,5 +1,5 @@
 #IE兼容性总结
-（注：文中所涉及IE版本钧包含自身。文中也会适当提及其它浏览器的兼容性。）
+（注：文中所涉及IE版本均包含自身。文中也会适当提及其它浏览器的兼容性。）
 ##概况
 IE9+基本已和chrome兼容性差不多，而IE7-市场占有率基本可不考虑，因此一般考虑的是IE8的兼容性。
 
@@ -28,19 +28,23 @@ IE8-一般不支持HTML5和CSS3
 	- 查找元素
 	
 		`querySeletor`/ `querySeletorAll` IE7~10只支持CSS2选择器，IE6-不支持。
+		
 		`getElementsByClassName` IE-不支持	
 	- 核心DOM操作
 		setAtrribute IE7-不支持，操作属性多使用HTML DOM方法。
 		<table>
 		  <tr>
+		    <td></td>
 		    <th>其它浏览器</th>
 		    <th>IE8-</th>
 		  </tr>
 		  <tr>
+		    <td>获取css style属性</td>
 		    <td>currentStyle</td>
 		    <td>getComputedStyle</td>
 		  </tr>
 		  <tr>
+		    <td>获取／设置文本内容</td>
 		    <td>innerText</td>
 		    <td>textContent</td>
 		  </tr>
