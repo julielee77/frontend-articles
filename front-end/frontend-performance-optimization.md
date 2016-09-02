@@ -13,6 +13,7 @@
 	[浅谈浏览器http的缓存机制](http://www.360doc.com/content/16/0405/10/30136251_547971176.shtml)
 	
 	[关于Web静态资源缓存自动更新的思考与实践](http://web.jobbole.com/82838/)
+	
 2. ###尽量减少HTTP请求的个数
 	- CSS sprite 合并多个背景图到一个单独图像（单张不高于200k）	
 	- 使用一些loader，合并js/css，并按需加载
