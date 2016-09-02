@@ -24,6 +24,7 @@ IE8-一般不支持HTML5和CSS3
 	- 节点树和元素树
 	
 		IE不支持元素树。对于节点树，IE与其它浏览器的解析不同，其它浏览器会包含Text节点。
+		
 		`elment.childNodes` IE6～8支持，IE9+和chrome不支持。
 	- 查找元素
 	
