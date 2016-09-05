@@ -32,26 +32,37 @@
 	- **js** 使用单引号		
 
 ##二. HTML优化
-1. ###HTML属性顺序
+1. ###明确声明文档类型，避免混杂模式（quirk mode）
+   `<!DOCTYPE html>`
+
+2. ###`<html lang="">`
+
+	方便语音合成工具或翻译工具
+3. ###HTML属性顺序
 	HTML属性应当按照以下顺序排列，确保代码的易读性
 	
-	class, id, name, data-\*, src, for, type, href, title, alt, aria-\*,role
+	`class`, `id`, `name`, `data-*`
+	 
+	`src`, `for`, `type`, `href` 
+	
+	`title`, `alt`
+	 
+	`aria-*`,`role`	
 
 ##三. CSS优化
-推荐参考[CSS Guide](http://cssguidelin.es) By [Harry Roberts](http://csswizardry.com/work/)的规范。
 
-1. 慎重选择高消耗的样式(Expensive styles)	
+1. ###慎重选择高消耗的样式(Expensive styles)	
 	- 合理安排selector
 	- 高消耗属性（绘制前浏览器需要进行大量计算）
 		`box-shadow` `border-radius` `transparency` `transform`
 	
 		css filters（性能杀手）
-2. 避免过分重绘(reflow)		
+2. ###避免过分重绘(reflow)		
 	例如，改变layout相关属性会触发重新布局，动画中应避免。如：
 	 `width`, `height`, `margin`, `padding`, `border` , `top`, `right`, `bottom`, `left`, `position`, `display`, `float`, `overflow`等
 	
 	不会触发重新布局的属性： `transform`, `color`, `background`等
-3. css reset
+3. ###css reset
 	**reset.css** 重置全部效果，讲求浏览器的一致性
 	
 	**normalize.css** 注重通用方案，重置掉该重置的部分，保留有用的user Agent样式，同时修复一些bug
@@ -85,7 +96,8 @@
 	- 选择器性能 （非重点）
 	- 渲染性能 （重点）
 	- 可维护性、健壮性
-
+	
+推荐参考[CSS Guide](http://cssguidelin.es) By [Harry Roberts](http://csswizardry.com/work/)的规范。
 ##四. javascript优化
 1. DOM的多个读操作，应放在一起。两个读操作间，不要插入写操作
 2. 如果某个样式是通过重排得到的，那么最好缓存结果。
