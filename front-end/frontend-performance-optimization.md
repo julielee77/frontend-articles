@@ -22,7 +22,7 @@
 	
 		常用工具YUI Compressor, uglify-js,jsMin以及一些loader
 	- **img** 不要在文档中缩放图像	
-	- **HTML** 非同源url或协议相同可省略，写作`//:`	
+	- **HTML** 非同源url或协议相同可省略，写作`//`	
 	- **css**
 		- 简写属性
 		
@@ -31,8 +31,9 @@
 		- 0px等省略单位
 		- 纯小数可省略0
 		- 十六进制颜色使用小写缩写形式 `#69f`
-	- **js** 使用单引号		
-
+	- **js** 使用单引号	
+	
+	Sublime Text编辑器配置SublimeLinter对js/css/html进行代码检测。
 ##二. HTML优化
 1. ###明确声明文档类型，避免混杂模式（quirk mode）
    `<!DOCTYPE html>`
