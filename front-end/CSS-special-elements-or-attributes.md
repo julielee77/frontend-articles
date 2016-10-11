@@ -208,6 +208,7 @@ CSS权值：通用*0.01 继承0.1 标签1  类10  id100  !Important最高
 		`pre-line` 合并空白符序列，但是保留换行符
 		
 		`inherit` 继承父级 
+		
 ##不常用css属性
 ###-webkit-font-smoothing:anialiased;
 设置字体的抗锯齿或平滑度	
