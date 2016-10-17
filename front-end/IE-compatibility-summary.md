@@ -35,7 +35,13 @@ IE8-一般不支持HTML5和CSS3，以下将不讨论。
 		
 		`:first-child` `:last-child`
 		
-3. 
+3. HTML5响应式布局
+4. 
+	 IE8-不支持，可使用respond.js解决。
+	 
+	 ```
+	 <!--[if lt IE 9]><script src = "http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><![endif]--> 
+	 ```
 
 
 ##javascript兼容情况
