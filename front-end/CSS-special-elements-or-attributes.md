@@ -198,6 +198,23 @@
 		
 		`inherit` 继承父级 
 		
+##颜色相关
+###background
+css3 增加了image相关的属性。
+
+css2的background简写：
+
+```
+background: background-color || background-image || background-repeat || background-attachment || background-position;
+```
+
+css3的background简写：
+
+```
+background: background-image || background-position/background-size || background-repeat || background-attachment || background-clip || background-origin || background-color
+```
+此外，CSS3支持多背景，其主要作用就是给同一个元素设置多个背景图像，并可以给多个背景图像设置相同或不相同的background-(position||repeat||clip||size||origin||attachment)。	
+		
 ##不常用css属性
 ###-webkit-font-smoothing:anialiased;
 设置字体的抗锯齿或平滑度	
