@@ -4,32 +4,16 @@ CSS权值：通用*0.01 继承0.1 标签1  类10  id100  !Important最高
 
 选择器分类：（1）基本选择器（2）层次选择器（3）过滤选择器
 
-- 后代选择器、子代选择器`>`、兄弟选择器`+`
-- 链接伪类： `:link`, `:visited`
+- 后代选择器、子代选择器`>`、兄弟选择器`+`、通配选择器`*`
+- 链接静态伪类： `:link`, `:visited`
 - 动态伪类：  `:hover`, `:active`, `:focus`
-- 结构伪类： :first/:last
+- 结构伪类： `:first-child`, `:last-child`
 - 其它伪类： `:left`, `:right`(仅用于@page规则，与装订线相关),     `:lang`
-- 伪对象： `::first-letter`, `::first-line`, `::before`, `::after`
-- CSS3选择器 通用兄弟选择器`~`、属性选择器`[]`
+- 伪元素： `::first-letter`, `::first-line`, `::before`, `::after`
+- CSS3选择器 通用兄弟选择器`~`、各种伪类／伪元素选择器
 
 <table>
-<caption>属性选择器示例</caption>
-  <tr>
-	<td>[id]</td>
-	<td>--</td>	
-  </tr>
-  <tr>
-    <td>p[id]</td>
-    <td>--</td>
-  </tr>
-  <tr>
-    <td>p[id][class]</td>
-    <td>--</td>
-  <tr>
-  <tr>
-    <td>p[id="sumary"]</td>
-    <td>--</td>
-  </tr>
+<caption>属性选择器匹配示例</caption>
   <tr>
     <td>p[class~="myClass"]</td>
     <td>附带class属性的p元素，且class值列表包含myClass</td>
@@ -45,6 +29,10 @@ CSS权值：通用*0.01 继承0.1 标签1  类10  id100  !Important最高
   <tr>
     <td>p[class$="b"]</td>
     <td>class属性值以“b”结尾</td>
+  </tr>
+  <tr>
+    <td>p[class｜="en"]</td>
+    <td>class属性值为“en”或以"en-"开头</td>
   </tr>
 </table>
 
@@ -68,15 +56,15 @@ CSS权值：通用*0.01 继承0.1 标签1  类10  id100  !Important最高
     <td>同类型中第n个同级兄弟元素</td>
   </tr>
   <tr>
-    <td>:last-child</td>
+    <td>:first-child/ :last-child</td>
     <td></td>
   </tr>
   <tr>
-    <td>first-of-type</td>
+    <td>:first-of-type/ :last-of-type</td>
     <td>同级兄弟元素中第一个元素</td>
   </tr>
   <tr>
-    <td>":only-child</td>
+    <td>:only-child</td>
     <td>唯一的子元素</td>
   </tr>
   <tr>
@@ -142,7 +130,8 @@ CSS权值：通用*0.01 继承0.1 标签1  类10  id100  !Important最高
 
 	建议设置 `line-height`为数值，它的子元素将根据其 `font-size`重新设置 `line-height`；其它情形则由像素值或计算出的像素值直接继承。
 - ###margin
-	**垂直外边距向上合并**
+//TODO 待补充
+	**block元素垂直margin 重叠**
 	1. 两个垂直外边距相遇时，将形成一个外边距，值等于两者中的较大者。
 	2. 子元素的 `margin-top`会赋给最近一层有效 `border-top`或 `padding-top`的父级（IE的 `haslayout`渲染则无此问题）
 	

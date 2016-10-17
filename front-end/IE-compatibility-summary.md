@@ -7,7 +7,35 @@ IE9+基本已和chrome兼容性差不多，而IE7-市场占有率基本可不考
 
 补充：jquery框架1.X版本支持IE7-，解决了很多IE兼容性问题，且便于操作DOM。其2.X版本支持IE8+。
 ##HTML/CSS兼容情况
-IE8-一般不支持HTML5和CSS3
+IE8-一般不支持HTML5和CSS3，以下将不讨论。
+###HTML
+###CSS
+1. 选择器
+	- 类选择器／子代选择器／兄弟选择器 IE6-不支持
+	
+		IE6-不支持多类选择器（对应不支持HTML多类写法）
+	
+		```
+		.urgent.warning{font-weight:bold};
+		```	
+	- 属性选择器
+	
+		IE6-不支持属性选择器子串匹配
+	
+		```
+		p[class^="en"]{text-decoration:underline;}
+		```
+	- 伪类选择器
+	
+		**动态伪类选择器（`:focus`, `:hover`, `:active`）**
+		
+		IE6-只支持a元素的动态伪类选择。IE7支持所有元素的 `:hover`选择。	
+		
+		`:first-child` `:last-child`
+		
+2. 
+
+
 ##javascript兼容情况
 ###核心JS
 **IE8-一般不支持ES5以上。**
