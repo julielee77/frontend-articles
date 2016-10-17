@@ -10,7 +10,7 @@
 - 结构伪类： `:first-child`, `:last-child`
 - 其它伪类： `:left`, `:right`(仅用于@page规则，与装订线相关),     `:lang`
 - 伪元素： `::first-letter`, `::first-line`, `::before`, `::after`
-- CSS3选择器 通用兄弟选择器`~`、各种伪类／伪元素选择器
+- CSS3选择器 通用兄弟选择器`~`、各种伪类选择器
 
 <table>
 <caption>属性选择器匹配示例</caption>
