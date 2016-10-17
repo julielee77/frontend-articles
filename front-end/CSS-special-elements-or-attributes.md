@@ -1,8 +1,8 @@
 #css特殊元素／属性总结
 ##选择器
-由选择器的权值和决定层叠的最终有效样式。（《css权威指南》中采用sepecifity的解释方法，与此类似）
+由选择器的层叠和权重决定最终有效样式。（《css权威指南》中sepecifity的解释方法，与此类似）
 
-选择器权值：（1）通用* 0.01（2）继承 0.1（3）标签 1（4）类 10（5）id 100（6）!important最高
+选择器权重：（1）通用* 0.01（2）继承 0.1（3）标签 1（4）类 10（5）id 100（6）!important最高
 
 
 选择器分类：（1）基本选择器（2）层次选择器（3）过滤选择器
@@ -109,6 +109,11 @@
 ###:before,:after
 :before,:after插入的内容默认是一个行内元素，并且在HTML源代码中无法看到，这就是为什么被称之为伪元素的理由，所以也就无法通过DOM对其进行操作（可通过改变住元素的class）。
 ##css继承
+基于继承机制，样式不仅应用到当前元素，还会应用到其后代元素。低版本浏览器继承会出现问题，且修复继承Bug还可能导致危险的问题。
+
+总结：文本／列表相关属性可继承，大多数框模型属性不能继承（　margin/padding/outline/）
+
+
 - 所有元素可继承： `visibility`和 `cursor`
 - 内联元素和块元素可继承： `letter-spacing`、`word-spacing`、`white-space`、`line-height`、`color`、`font`、 `font-family`、`font-size`、`font-style`、`font-variant`、`font-weight`、`text- decoration`、`text-transform`、`direction`
 - 块状元素可继承： `text-indent`和`text-align`
@@ -116,7 +121,6 @@
 - 表格元素可继承： `border-collapse`
 - 不可继承的： `display`、`margin`、`border`、`padding`、`background`、`height`、`min-height`、`max-height`、`width`、`min-width`、`max-width`、`overflow`、`position`、`left`、`right`、`top`、 `bottom`、`z-index`、`float`、`clear`、`table-layout`、`vertical-align`、`page-break-after`、 `page-bread-before`和`unicode-bidi`
 
-总结：文本／列表相关属性可继承
 ##box-model
 - ###inline元素
 	**高度依浏览器而异**
@@ -134,6 +138,7 @@
 	建议设置 `line-height`为数值，它的子元素将根据其 `font-size`重新设置 `line-height`；其它情形则由像素值或计算出的像素值直接继承。
 - ###margin
 //TODO 待补充
+
 	**block元素垂直margin 重叠**
 	1. 两个垂直外边距相遇时，将形成一个外边距，值等于两者中的较大者。
 	2. 子元素的 `margin-top`会赋给最近一层有效 `border-top`或 `padding-top`的父级（IE的 `haslayout`渲染则无此问题）
