@@ -179,6 +179,11 @@
 	如果 `overflow`被设置为 `hidden`，元素的内容会在元素的边界处剪裁，不过不会提供滚动接口使用户访问到超出剪裁区域的内容。
 	
 ##font/text
+- ###字体
+	css定义了5种通用字体系列，即serif/sans-serif/monospace/cursive/fantasy。一般情况下，设备上的任何字体都会归入其中的一类。因此定义fon-family时，应至少定义一种通用系列字体。
+	
+	`body{font-family:Georgia,serif;}`
+	
 - ###文字换行
 	- word-wrap
 	
