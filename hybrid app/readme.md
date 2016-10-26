@@ -1,4 +1,4 @@
-#hybrid app 移动端（主要hybridApp）经验总结
+#hybrid app 移动端经验总结
 
 一般有[示例demo参考](https://github.com/JulieLee77/demo)
 
