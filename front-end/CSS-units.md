@@ -6,14 +6,12 @@
 3. 设置父元素
 
 	```
-	div:after
-	  	  clear both
+	div:after{clear: both;}
 	```
 4. 设置父元素
 
 	```
-	div
-  	  overflow hidden
+	div{overflow: hidden;}
 	```
 	
 ##水平／垂直居中	
@@ -22,24 +20,23 @@
 	设置其父元素
 	
 	```
-	div
-  	  text-align center
+	div{text-align: center;}
 	```
 	**inline元素应注意元素间的空格／回车**
 2. block元素
 
 	```
-	div
-      width 960px
-      margin 0 auto
+	div{
+      width: 960px;
+      margin: 0 auto;
+    }  
 	```
 	
 ###垂直居中
 1. 单行
 
 	```
-	p
-      line-height 44px;
+	p{line-height: 44px;}
 	```
 2. 多行
 
@@ -55,6 +52,7 @@
 CSS实现方法（1）
 
 ```
+/*stylus*/
 .align-center
   text-align center
   &:after
@@ -69,12 +67,13 @@ CSS实现方法（1）
 此方法会有兼容性问题，比如MX2不支持。
 
 ```
-.align-center
-  -webkit-align-items center
-  -ms-flex-align center
-  align-items center
-  display -webkit-flex
-  display flex
+.align-center{
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}  
 ```
 [未知尺寸元素水平垂直居中](http://demo.doyoe.com/css/alignment/)
 
@@ -88,21 +87,43 @@ CSS实现方法（1）
 
 ###单行文本省略
 ```
-p
-  text-overflow ellipsis
-  overflow hidden
-  white-space nowrap
+p{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}  
 ``` 
 
 ###多行文本省略
 -webkit内核浏览器（移动端）
 
 ```
-p
-  overflow hidden
-  text-overflow ellipsis
-  display -webkit-box
-  -webkit-line-clamp 2
-  -webkit-box-orient vertical
+p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}  
 ```
+##清除浮动
+###1. BootStrap方法
+		```
+		/*stylus*/
+		.clearfix
+		  &:before,&:after
+		    content ""
+		    display table
+		    line-height 0
+		  &:after
+		    clear both
+		 ```
+###2. float元素加空元素清除其浮动
+`div{clear: both;}`
+
+//TODO:待补充
+
+//TODO:页脚效果利用flex布局实现
+
+//TODO:加目录链接
 
