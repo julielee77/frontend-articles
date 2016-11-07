@@ -125,13 +125,19 @@ p{
 	}
 	```
 3. ###结合:after（bootStrap）
+	bootstrap v4.0.0的实现
+	
+	```
+	.clearfix:after{
+	  content:"";
+	  display:table;
+	  clear:both;
+	}    
+	```
+	之前的bootstrap实现
+	
 	```
 	/*stylus*/
-	.clearfix:after
-	    content ""
-	    display table
-	    clear both
-	/*last implementation*/ 
 	.clearfix2
 	  zoom 1
 	  &:before,&:after
