@@ -81,15 +81,15 @@ CSS实现方法（1）
 
 支持IE8+/chrome/firefox，利用td的vertical-align:middle
 
-##文字省略后加省略号
+##文本省略
 
 [多行文本溢出显示省略号(…)全攻略](http://www.css88.com/archives/5206) 
 
 ###单行文本省略
 ```
 p{
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }  
 ``` 
