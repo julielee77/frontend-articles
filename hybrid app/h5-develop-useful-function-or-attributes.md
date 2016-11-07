@@ -66,7 +66,11 @@ textarea,input{
 	appearance:none;
 }
 ```
-去掉`textrea`, `input`的默认样式（如ios的圆角及内阴影）。对于 `radio`，`checkbox`可解决移动端不能设置大小（扩展选取范围）。
+不显示浏览器的默认样式。
+
+对于`textrea`, `input`去掉ios的圆角及内阴影。
+
+对于 `radio`，`checkbox`可扩展选取范围，但已选样式需要图标。
 ##user-select:none
 禁止长按选取／复制
 
@@ -87,6 +91,10 @@ body{
 对其它type的input设置此属性时，移动设备会有较长延迟（即输入时先明码显示，之后一会儿才转换为disc）
 
 详细示例及说明参见 [移动端h5问题探索(1)支付密码输入框](https://github.com/JulieLee77/frontend-articles/blob/master/hybrid%20app/mobile-h5-issue1-pay-password.md)
-##-webkit-text-size-adjust:none;
-解决chrome不支持中文font-size<12px的情况，但目前mobile已普遍不支持此属性，且支持了font-size<12px。
+##-webkit-text-size-adjust:100%;
+禁止横竖屏时webkit内核浏览器网页文字缩放，解决font-size<12px不能显示的问题（现代浏览器基本已无此问题）。
+
+chrome27已不再支持此属性。
+
+若设置全局的`-webkit-text-size-adjust:none;`会导致放大网页的时候字号不能改变。
 

@@ -106,22 +106,41 @@ p{
   -webkit-box-orient: vertical;
 }  
 ```
+注意：设置以上样式后设置其:first-line的样式不生效。
 ##清除浮动
-###1. BootStrap方法
-		```
-		/*stylus*/
-		.clearfix
-		  &:before,&:after
-		    content ""
-		    display table
-		    line-height 0
-		  &:after
-		    clear both
-		 ```
-###2. float元素加空元素清除其浮动
-`div{clear: both;}`
-
-//TODO:待补充
+1. ###加空元素
+	```
+	.clear{
+	  clear:both;
+	  height:0;
+	  line-height:0;
+	  font-size:0;
+	}
+	```
+2. ###父级overflow:auto
+	```
+	.parent{
+	  overflow:auto;
+	  zoom:1;/*解决IE6/7兼容问题*/
+	}
+	```
+3. ###结合:after（bootStrap）
+	```
+	/*stylus*/
+	.clearfix:after
+	    content ""
+	    display table
+	    clear both
+	/*last implementation*/ 
+	.clearfix2
+	  zoom 1
+	  &:before,&:after
+	    content ""
+	    display table
+	    line-height 0
+	  &:after
+	    clear both     
+	 ```
 
 //TODO:页脚效果利用flex布局实现
 
