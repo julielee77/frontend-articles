@@ -1,19 +1,5 @@
 #CSS常用功能实现
 [github文件下载地址](https://github.com/JulieLee77/units)
-##子元素float后父元素有高度的方法
-1. 设置父元素float
-2. 设置父元素高度
-3. 设置父元素
-
-	```
-	div:after{clear: both;}
-	```
-4. 设置父元素
-
-	```
-	div{overflow: hidden;}
-	```
-	
 ##水平／垂直居中	
 ###水平居中
 1. inline/inline-block元素
