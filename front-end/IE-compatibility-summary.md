@@ -46,7 +46,7 @@ IE8-一般不支持HTML5和CSS3，以下将不讨论。
 
 	IE6-不支持自动padding。
 	
-	IE7-不支持inline-block元素。 
+	IE7-不支持inline-block/inline-table。 
 
 
 ##javascript兼容情况

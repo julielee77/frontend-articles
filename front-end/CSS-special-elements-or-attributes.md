@@ -130,7 +130,7 @@
 	
 	注：**元素设置position:absolute ／ float后将变为inline-block元素。**
 	
-	IE8+支持inline-block元素，一行可显示多个且换行符有间隙（inline元素），可设置宽／高。
+	inline-block/inline-table类型（IE8+支持）属于block类型，具有 inline元素的特性，即一行可显示多个且换行符有间隙。
 - ###line-height
 	- `line-height: 1.5`
 	- `line-height: 150%`
