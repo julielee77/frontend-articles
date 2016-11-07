@@ -1,5 +1,10 @@
 #前端性能优化
 为了优化网页加载速度，以及便于扩展或维护等，通常需要优化前端代码或配置。
+
+- [优化总则](#一. 优化总则)
+- [HTML优化](#二. HTML优化)
+- [CSS优化](#三. CSS优化)
+- [javascript优化](四. javascript优化)
 ##一. 优化总则
 1. ###缓存
 	缓存无疑是非常重要的，在一个项目中一般已做好各级的缓存（由客户端和后端），而对于前端来说需要关注浏览器缓存以及localStorage/sessionStorage能做到的一些事情（如缓存常用js文件／图片等）。
@@ -34,6 +39,7 @@
 	- **js** 使用单引号	
 	
 	Sublime Text编辑器配置SublimeLinter对js/css/html进行代码检测。
+	
 ##二. HTML优化
 1. ###明确声明文档类型，避免混杂模式（quirk mode）
    `<!DOCTYPE html>`
