@@ -244,7 +244,7 @@ background: background-image || background-position/background-size || backgroun
 
 或使用 `gradient(type,...)`
 
-**注：**web app开发时，有些低版本机型不支持background渐变，可改写为background-image渐变。		
+**注：**web app开发时，有些低版本机型不支持background渐变背景，可改写为background-image渐变。		
 ##不常用css属性
 ###-webkit-font-smoothing:anialiased;
 设置字体的抗锯齿或平滑度	
