@@ -1,5 +1,12 @@
 #css特殊元素／属性总结
-##选择器
+- [seletors](#selectors)
+- [inheritance](#inhertitance)
+- [box-model](#box-model)
+- [positioning](#positioning)
+- [text](#text)
+- [color](#color)
+- [unusual attributes](#unusual attributes)
+##selectors
 由选择器的层叠和权重决定最终有效样式。（《css权威指南》中sepecifity的解释方法，与此类似）
 
 选择器权重：（1）通用* 0.01（2）继承 0.1（3）标签 1（4）类 10（5）id 100（6）!important最高
@@ -108,7 +115,7 @@
 </table>
 ###:before,:after
 :before,:after插入的内容默认是一个行内元素，并且在HTML源代码中无法看到，这就是为什么被称之为伪元素的理由，所以也就无法通过DOM对其进行操作（可通过改变住元素的class）。
-##css继承
+##inheritance
 基于继承机制，样式不仅应用到当前元素，还会应用到其后代元素。低版本浏览器继承会出现问题，且修复继承Bug还可能导致危险的问题。
 
 总结：文本／列表相关属性可继承，大多数框模型属性不能继承（　margin/padding/outline/）
@@ -190,7 +197,7 @@
 	
 	如果 `overflow`被设置为 `hidden`，元素的内容会在元素的边界处剪裁，不过不会提供滚动接口使用户访问到超出剪裁区域的内容。
 	
-##font/text
+##text
 - ###字体
 	css定义了5种通用字体系列，即serif/sans-serif/monospace/cursive/fantasy。一般情况下，设备上的任何字体都会归入其中的一类。因此定义fon-family时，应至少定义一种通用系列字体。
 	
@@ -223,7 +230,7 @@
 		
 		`inherit` 继承父级 
 		
-##颜色相关
+##color
 ###background
 css3 增加了image相关的属性。
 
@@ -255,7 +262,7 @@ background: background-image || background-position/background-size || backgroun
 或使用 `gradient(type,...)`
 
 **注：**web app开发时，有些低版本机型不支持background渐变背景，可改写为background-image渐变。		
-##不常用css属性
+##unusual attributes
 ###-webkit-font-smoothing:anialiased;
 设置字体的抗锯齿或平滑度	
 ###-webkit-backface-visibility:hidden;
