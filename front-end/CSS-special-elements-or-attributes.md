@@ -129,6 +129,8 @@
 	可将元素设置为 `inline-block`以解决此类问题。若需垂直居中，可再添加 `vertical-align:middle`。
 	
 	注：**元素设置position:absolute ／ float后将变为inline-block元素。**
+	
+	IE8+支持inline-block元素，一行可显示多个且换行符有间隙（inline元素），可设置宽／高。
 - ###line-height
 	- `line-height: 1.5`
 	- `line-height: 150%`
@@ -185,12 +187,12 @@
 	`body{font-family:Georgia,serif;}`
 	
 - ###文字换行
-	- word-wrap
+	- word-wrap 让长单词自动换行
 	
 		`normal` 只在允许的断字点换行（默认值）
 		
 		`break-word` 在长单词或URL内部换行
-	- word-break
+	- word-break 让文本自动换行
 	
 		`normal` 使用浏览器默认的换行规则
 		

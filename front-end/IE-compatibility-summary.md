@@ -42,9 +42,11 @@ IE8-一般不支持HTML5和CSS3，以下将不讨论。
 	 ```
 	 <!--[if lt IE 9]><script src = "http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><![endif]--> 
 	 ```
-4. 自动外边距
+4. 盒模型
 
-	IE6-不支持。	 
+	IE6-不支持自动padding。
+	
+	IE7-不支持inline-block元素。 
 
 
 ##javascript兼容情况
