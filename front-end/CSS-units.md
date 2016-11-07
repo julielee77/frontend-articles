@@ -69,32 +69,6 @@
 支持IE8+/chrome/firefox，利用td的vertical-align:middle
 4)设置固定上下padding
 
-##文本省略
-
-[多行文本溢出显示省略号(…)全攻略](http://www.css88.com/archives/5206) 
-
-###单行文本省略
-```
-p{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}  
-``` 
-
-###多行文本省略
--webkit内核浏览器（移动端）
-
-```
-p{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}  
-```
-注意：设置以上样式后设置其:first-line的样式不生效。
 ##清除浮动并使父元素有高度
 1. 加空元素
 
@@ -138,7 +112,33 @@ p{
 	  &:after
 	    clear both     
 	 ```
+##文本省略
 
+[多行文本溢出显示省略号(…)全攻略](http://www.css88.com/archives/5206) 
+
+###单行文本省略
+```
+p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}  
+``` 
+
+###多行文本省略
+-webkit内核浏览器（移动端）
+
+```
+p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}  
+```
+
+注意：设置以上样式后设置其:first-line的样式不生效。
 //TODO:页脚效果利用flex布局实现
 
 //TODO:加目录链接
