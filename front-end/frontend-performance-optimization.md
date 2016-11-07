@@ -4,7 +4,7 @@
 - [优化总则](#一-优化总则)
 - [HTML优化](#二-HTML优化)
 - [CSS优化](#三-CSS优化)
-- [javascript优化](四-javascript优化)
+- [javascript优化](#四-javascript优化)
 
 ##一. 优化总则
 1. ###缓存
