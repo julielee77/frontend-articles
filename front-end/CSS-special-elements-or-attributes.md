@@ -139,17 +139,27 @@
 
 	建议设置 `line-height`为数值，它的子元素将根据其 `font-size`重新设置 `line-height`；其它情形则由像素值或计算出的像素值直接继承。
 - ###margin
-//TODO 待补充
-
-	**block元素垂直margin 重叠**
-	1. 两个垂直外边距相遇时，将形成一个外边距，值等于两者中的较大者。
-	2. 子元素的 `margin-top`会赋给最近一层有效 `border-top`或 `padding-top`的父级（IE的 `haslayout`渲染则无此问题）
+	**百分比单位**
+	普通元素的margin百分比相对于容器的宽度
 	
-		解决方法：（1）父元素设置透明 `border-top`（2）改用 `padding-top`(3)bootstrap方法 `:before{content:"",display:table;}`
+	absolute元素margin百分比相对于有定位属性的最近祖先元素的宽度
+	**block元素垂直margin重叠**
+	即两个垂直margin相遇时，将形成一个外边距，值等于两者中的绝对值较大者。
+	
+	分为以下三种情形：
+	
+	1. 相邻兄弟元素
+	2. 父子元素
+		满足条件：父元素无`overflow:hidden` ／`border-top`／ `padding-top` ,两者间无inline元素。并且父元素无height/min-height时，发生margin-bottom重叠。
+	3. 空元素
+	
+	解决方法：（1）破坏重叠的条件，如父元素设置透明 `border-top`、改用 `padding-top`等(2)bootstrap方法 `:before{content:"",display:table;}`
 
 	**inline/inline-block元素间的margin**
-	inline/inline-block元素间的空格／回车会形成一定的默认margin。
-	（回车可使用 `<!-- -->`消除）
+	
+	inline元素只有水平margin有效。
+	
+	inline/inline-block元素间的空格／回车会形成一定的默认margin。（回车可使用 `<!-- -->`消除）
 - ###border
 	`border:none` 不渲染，但有兼容性问题（IE6/7），可同时设置`background:none`。
 	

@@ -50,7 +50,7 @@
 	
 **不定高元素内容水平垂直居中（如弹出框）**
 
-CSS实现方法（1）
+1）
 
 ```
 /*stylus*/
@@ -64,7 +64,7 @@ CSS实现方法（1）
     display inline-block
     vertical-align middle	
 ```
-实现方法（2）－－flex方案
+2）－－flex方案
 此方法会有兼容性问题，比如MX2不支持。
 
 ```
@@ -78,9 +78,10 @@ CSS实现方法（1）
 ```
 [未知尺寸元素水平垂直居中](http://demo.doyoe.com/css/alignment/)
 
-实现方法（3）－－display:table-cell
+3）－－display:table-cell
 
 支持IE8+/chrome/firefox，利用td的vertical-align:middle
+4)设置固定上下padding
 
 ##文本省略
 
