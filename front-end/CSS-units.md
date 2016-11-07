@@ -110,7 +110,8 @@ p{
 ```
 注意：设置以上样式后设置其:first-line的样式不生效。
 ##清除浮动并使父元素有高度
-1. ###加空元素
+1. 加空元素
+2. 
 	```
 	.clear{
 	  clear:both;
@@ -119,14 +120,16 @@ p{
 	  font-size:0;
 	}
 	```
-2. ###父级overflow:auto
+2. 父级overflow:auto
+
 	```
 	.parent{
 	  overflow:auto;
 	  zoom:1;/*解决IE6/7兼容问题*/
 	}
 	```
-3. ###结合:after（bootStrap）
+3. 结合:after（bootStrap）
+
 	bootstrap v4.0.0的实现
 	
 	```
