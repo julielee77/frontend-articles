@@ -1,7 +1,11 @@
 
 #CSS常用功能实现
-[github文件下载地址](https://github.com/JulieLee77/units)
 
+- [水平／垂直居中](#user-content-水平／垂直居中)
+- [清除浮动并使父元素有高度](#user-content-清除浮动并使父元素有高度)
+- [文本省略](#user-content-文本省略)
+
+[github文件下载地址](https://github.com/JulieLee77/units)
 ##水平／垂直居中	
 ###水平居中
 1. inline/inline-block元素
