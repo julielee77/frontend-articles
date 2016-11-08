@@ -2,8 +2,8 @@
 为了优化网页加载速度，以及便于扩展或维护等，通常需要优化前端代码或配置。
 
 - [优化总则](#优化总则)
-- [HTML优化](#HTML优化)
-- [CSS优化](#CSS优化)
+- [html优化](#html优化)
+- [css优化](#css优化)
 - [javascript优化](#javascript优化)
 
 ##优化总则
@@ -41,7 +41,7 @@
 	
 	Sublime Text编辑器配置SublimeLinter对js/css/html进行代码检测。
 	
-##HTML优化
+##html优化
 1. ###明确声明文档类型，避免混杂模式（quirk mode）
    `<!DOCTYPE html>`
 
@@ -59,7 +59,7 @@
 	 
 	`aria-*`,`role`	
 
-##CSS优化
+##css优化
 
 1. ###慎重选择高消耗的样式(Expensive styles)	
 	- 合理安排selector
