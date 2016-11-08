@@ -47,12 +47,15 @@
 	
 ```
 //判断数据类型的简单实现
-function identifyType(value) {
-  var type = typeof value;
+function identifyType(val) {
+  var type = typeof val;
+  //非object类型 string,boolean,number,undefined,function
   if (type !== 'object') {
     return type;
   }
-  return Object.prototype.toString.call(value).slice(8, -1);
+  //obejct类型使用prototype判断，如[object Array]
+  return Object.prototype.toString.call(val).slice(8, -1); 
+}
 }
 ```	
 	
