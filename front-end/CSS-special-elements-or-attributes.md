@@ -197,7 +197,7 @@
 		（1）应避免使用relative (2)relative最小化原则
 	2. absolute
 	
-		父级relative限制子元素absolute的top等、层级、超越overflow。
+		父级定位限制子元素absolute的top等、层级、超越overflow。
 		
 		
 		因而独立无依赖absolute元素（尤其是跟随性）可实现很多效果。
