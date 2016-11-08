@@ -200,7 +200,7 @@
 		父级relative限制子元素absolute的top等、层级、超越overflow。
 		
 		
-		因而独立无依赖absolute可实现很多效果。
+		因而独立无依赖absolute元素（尤其是跟随性）可实现很多效果。
 	3. fixed
 	
 		移动端低版本浏览器有很多fixed兼容问题，目前android 4.2以上已完全支持。
