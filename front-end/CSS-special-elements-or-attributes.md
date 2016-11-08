@@ -1,6 +1,6 @@
 #css特殊元素／属性总结
 - [seletors](#selectors)
-- [inheritance](#inhertitance)
+- [inheritance](#inheritance)
 - [box-model](#box-model)
 - [positioning](#positioning)
 - [text](#text)
