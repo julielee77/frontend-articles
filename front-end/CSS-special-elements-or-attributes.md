@@ -5,7 +5,8 @@
 - [positioning](#positioning)
 - [text](#text)
 - [color](#color)
-- [unusual attributes](#unusual attributes)
+- [unusual attributes](#unusual-attributes)
+
 ##selectors
 由选择器的层叠和权重决定最终有效样式。（《css权威指南》中sepecifity的解释方法，与此类似）
 
