@@ -1,4 +1,4 @@
-#常用算法的javascript实现
+#常用算法／功能的javascript实现
 ##排序算法
 1. 冒泡排序
 
@@ -44,4 +44,16 @@
 	- instanceof
 	- Obejct.prototype.toString().call =>[obejct array]…
 	- constructor
+	
+```
+//判断数据类型的简单实现
+function identifyType(value) {
+  var type = typeof value;
+  if (type !== 'object') {
+    return type;
+  }
+  return Object.prototype.toString.call(value).slice(8, -1);
+}
+```	
+	
 
