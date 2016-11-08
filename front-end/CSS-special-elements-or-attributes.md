@@ -138,7 +138,7 @@
 	
 	可将元素设置为 `inline-block`以解决此类问题。若需垂直居中，可再添加 `vertical-align:middle`。
 	
-	注：**元素设置position:absolute ／ float后将变为inline-block元素。**
+	注：IE7中元素设置position:absolute ／ float后将变为inline-block元素。
 	
 	inline-block/inline-table类型（IE8+支持）属于block类型，具有 inline元素的特性，即一行可显示多个且换行符有间隙。
 - ###margin
@@ -196,7 +196,14 @@
 		
 		（1）应避免使用relative (2)relative最小化原则
 	2. absolute
+	
+		父级relative限制子元素absolute的top等、层级、超越overflow。
+		
+		
+		因而独立无依赖absolute可实现很多效果。
 	3. fixed
+	
+		移动端低版本浏览器有很多fixed兼容问题，目前android 4.2以上已完全支持。
 - ###z-index
 	默认值为auto。建议：非弹窗元素的z-index不大于2，避免层级混乱。
 	
