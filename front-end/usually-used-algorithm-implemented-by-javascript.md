@@ -38,7 +38,7 @@
 	```
 
 ##数据类型判断
-1. typeof =>string number boolean function object 
+1. typeof =>string number boolean undefined function object 
 2. object类型再进一步判断，可使用
 
 	- instanceof
