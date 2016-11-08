@@ -47,7 +47,8 @@ IE8-一般不支持HTML5和CSS3，以下将不讨论。
 	IE6-不支持自动padding。
 	
 	IE7-不支持inline-block/inline-table。 
-
+	
+	IE6/7容易出现层级覆盖，因为z-index:auto会创建层叠上下文。
 
 ##javascript兼容情况
 ###核心JS

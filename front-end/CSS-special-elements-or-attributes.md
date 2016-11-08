@@ -191,10 +191,15 @@
 
 	建议设置 `line-height`为数值，它的子元素将根据其 `font-size`重新设置 `line-height`；其它情形则由像素值或计算出的像素值直接继承。	
 ##positioning
+- ###position
+	1. relative
+		
+		（1）应避免使用relative (2)relative最小化原则
+	2. absolute
+	3. fixed
 - ###z-index
 	默认值为auto。建议：非弹窗元素的z-index不大于2，避免层级混乱。
 	
-	 更多详细内容参见[张鑫旭z-index－慕课视频](http://www.imooc.com/learn/643)
 - ###overflow
 	overflow规定当内容溢出元素时发生的事情。值visible（默认）/hidden/scroll/auto/inherit（IE8-不支持）。
 	
