@@ -130,6 +130,8 @@
 - 不可继承的： `display`、`margin`、`border`、`padding`、`background`、`height`、`min-height`、`max-height`、`width`、`min-width`、`max-width`、`overflow`、`position`、`left`、`right`、`top`、 `bottom`、`z-index`、`float`、`clear`、`table-layout`、`vertical-align`、`page-break-after`、 `page-bread-before`和`unicode-bidi`
 
 ##box-model
+注：普通某种类型元素，指无定位／浮动等的非替换元素（img/input/button等）
+
 - ###inline元素
 	**高度依浏览器而异**
 	inline元素设置 `line-height`后，与其高度不相等，不同浏览器渲染有差异。因此，设置inline元素 `float`或子元素相对于其定位时，均会出现问题。
@@ -139,13 +141,6 @@
 	注：**元素设置position:absolute ／ float后将变为inline-block元素。**
 	
 	inline-block/inline-table类型（IE8+支持）属于block类型，具有 inline元素的特性，即一行可显示多个且换行符有间隙。
-- ###line-height
-	- `line-height: 1.5`
-	- `line-height: 150%`
-	- `line-height: 1.5em`
-	- `line-height: 36px`
-
-	建议设置 `line-height`为数值，它的子元素将根据其 `font-size`重新设置 `line-height`；其它情形则由像素值或计算出的像素值直接继承。
 - ###margin
 	**百分比单位**
 	普通元素的margin百分比相对于容器的宽度
@@ -165,9 +160,11 @@
 
 	**inline/inline-block元素间的margin**
 	
-	inline元素只有水平margin有效。
+	普通inline元素只有水平margin有效。
 	
 	inline/inline-block元素间的空格／回车会形成一定的默认margin。（回车可使用 `<!-- -->`消除）
+	**display为table相关的元素（非替换元素）相关margin无效**
+	**绝对定位元素非定位方位的margin值“无效”**
 - ###border
 	`border:none` 不渲染，但有兼容性问题（IE6/7），可同时设置`background:none`。
 	
@@ -186,6 +183,13 @@
 	[页面可用性之outline轮廓外框的一些研究－－张鑫旭](http://www.zhangxinxu.com/wordpress/2010/01/页面可用性之outline轮廓外框的一些研究/)
 	
 	`outline-radius`只有firefox支持。
+- ###line-height
+	- `line-height: 1.5`
+	- `line-height: 150%`
+	- `line-height: 1.5em`
+	- `line-height: 36px`
+
+	建议设置 `line-height`为数值，它的子元素将根据其 `font-size`重新设置 `line-height`；其它情形则由像素值或计算出的像素值直接继承。	
 ##positioning
 - ###z-index
 	默认值为auto。建议：非弹窗元素的z-index不大于2，避免层级混乱。
