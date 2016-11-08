@@ -42,7 +42,7 @@
 	
 **不定高元素内容水平垂直居中（如弹出框）**
 
-1）
+1）利用inline-block元素
 
 ```
 /*stylus*/
@@ -56,7 +56,7 @@
     display inline-block
     vertical-align middle	
 ```
-2）－－flex方案
+2）flex方案
 此方法会有兼容性问题，比如MX2不支持。
 
 ```
@@ -70,10 +70,31 @@
 ```
 [未知尺寸元素水平垂直居中](http://demo.doyoe.com/css/alignment/)
 
-3）－－display:table-cell
+3）display:table-cell
 
 支持IE8+/chrome/firefox，利用td的vertical-align:middle
-4)设置固定上下padding
+4）设置固定上下padding
+5）利用定位元素（IE8+）
+
+```
+.box {
+  background: olive;
+  height: 300px;
+  position: relative;
+}
+
+.box>div {
+  background: #69f;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+```
 
 ##清除浮动并使父元素有高度
 1. 加空元素
