@@ -49,6 +49,14 @@ IE8-一般不支持HTML5和CSS3，以下将不讨论。
 	IE7-不支持inline-block/inline-table。 
 	
 	IE6/7容易出现层级覆盖，因为z-index:auto会创建层叠上下文。
+	
+	利用拉伸实现全屏效果（IE7+）
+	```
+	div{
+	  position:absolute;top:0;right:0;bottom:0;left:0;
+	}
+	```
+	
 
 ##javascript兼容情况
 ###核心JS

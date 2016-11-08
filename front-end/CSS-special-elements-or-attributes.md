@@ -201,6 +201,12 @@
 		
 		
 		因而独立无依赖absolute元素（尤其是跟随性）可实现很多效果。
+		```
+		div{
+		  position:absolute;top:0;right:0;bottom:0;left:0;
+		}
+		```
+		利用拉伸实现全屏效果（IE7+）
 	3. fixed
 	
 		移动端低版本浏览器有很多fixed兼容问题，目前android 4.2以上已完全支持。
