@@ -2,6 +2,8 @@
 ##排序算法
 1. 冒泡排序
 
+	基本思想：每轮循环找出最小值（或最大值），每次比较两个相邻的元素，若顺序错误则交换。时间复杂度为O(N^2)
+
 	```
 	function bubbleSort(arr) {
 	  var length = arr.length;
@@ -19,7 +21,9 @@
 	}
 	```
 2. 插入排序
-	插入排序分为直接插入排序和折半插入排序，这里讨论直接插入排序
+	插入排序分为直接插入排序和折半插入排序，这里讨论直接插入排序。
+	
+	基本思想：
 	
 	```
 	function insertionSort(arr) {
@@ -37,6 +41,7 @@
 	}
 	```
 
+其它排序算法：桶排序、快速排序（每次将一个基准数归位）
 ##数据类型判断
 1. typeof =>string number boolean undefined function object 
 2. object类型再进一步判断，可使用

@@ -70,12 +70,16 @@ IE8-一般不支持HTML5和CSS3，以下将不讨论。
 	```
 
 ###DOM
+IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug。
+
 1. DOM元素
 	- 节点树和元素树
 	
 		IE不支持元素树。对于节点树，IE与其它浏览器的解析不同，其它浏览器会包含Text节点。
 		
-		`elment.childNodes` IE6～8支持，IE9+和chrome不支持。
+		`element.childNodes` IE6～8支持，IE9+和chrome不支持。
+		
+		IE8-无内置Node对象。
 	- 查找元素
 	
 		`querySeletor`/ `querySeletorAll` IE7~10只支持CSS2选择器，IE6-不支持。
@@ -106,7 +110,7 @@ IE8-一般不支持HTML5和CSS3，以下将不讨论。
 		IE使用冒泡事件模型，其它现代浏览器使用捕获冒泡事件模型。
 		```
 		function XXX(event){
-			event= event||window.event;//firefox在js事件中无event对象，需由参数传递而来
+			event= event||window.event;//IE中使用全局Event对象
 		}
 		```
 	- 事件及属性
