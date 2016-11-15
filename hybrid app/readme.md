@@ -1,7 +1,5 @@
 #hybrid app 移动端经验总结
 
-一般有[示例demo参考](https://github.com/JulieLee77/demo)
-
 - [Hybrid App开发概述](Hybrid-App-develop-overview.md)
 - [h5开发实用功能／属性](h5-develop-useful-function-or-attributes.md)
 - [移动端h5问题总结](mobile-h5-issue-summary.md)
