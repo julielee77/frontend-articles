@@ -1,11 +1,55 @@
 #javascript特殊属性总结
 ##DOM
+###尺寸相关
+1. window 窗口
+
+	`innerWidth` ／`innerHeight`  （ IE9＋）
+	
+	`outerWidth` ／`outerHeight`（IE9+）
+	
+	`screenLeft` ／`screenTop`
+	
+	`screenX` ／`screenY`
+2. screen 设备
+	
+	`width` ／`height`
+	`availWidth` ／`availHeight`
+3.  其它尺寸
+	- client
+		
+		＝ content－滚动距离+padding 无兼容问题
+		
+		`clientWidth` /`clientHeight` 
+		
+		`clientLeft` /`clientTop`
+	- offset
+		
+		 ＝content－滚动距离+padding+border --chrome/firefox/safari
+		 
+		`offsetWidth` /`offsetHeight`  
+		 
+	 	`offsetLeft` /`offsetTop`
+
+	- scroll
+	
+		＝ content+padding --chrome/firefox/safari
+
+		`scrollWidth` /`scrollHeight` 
+		    
+		`scrollLeft` /`scrollTop`（可读写）
+		
+由于firefox等对body高度的解析不同，故应注意：
+
+```
+var clientWidth=(document.documentElement||document.body).clientWidth
+```		
+
+scrollTop/scrollLeft可设置（无px单位），使DOM元素滚动到某处。		
 ###element.classList
 支持IE10+，Android 2.3（不包括）+
 
 API `length`, `item`, `add`, `remove`, `contains`, `toggle`
-###element.scrollTop=XX
-使DOM元素滚动到某处，无px单位
+
 ###阻止事件默认行为
 - `event.preventDefault()`
 
