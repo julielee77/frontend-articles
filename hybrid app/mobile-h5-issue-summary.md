@@ -1,6 +1,14 @@
 #移动端h5问题总结
 以下问题提到的机型特指原系统自带的浏览器。
-##position:fixed
+
+- [fixed定位](#fixed定位)
+- [button类型input的disabled](#button类型input的disabled)
+- [1px问题](#1px问题)
+- [border-radius](#border-radius)
+- [禁止滚动](#禁止滚动)
+- [background](#background)
+
+##fixed定位
 1. ###ios4-, Android 2.1-不支持fixed
 	position一律为static
 
@@ -64,7 +72,7 @@
 ###移动端fixed受transform影响
 //TODO
 此外，position:fixed还有其它一些坑，比如其中不能有input/textarea输入框，这样调出键盘后会会出现错位。而且，Android比ios表现更好。[更多fixed坑](https://github.com/maxzhang/maxzhang.github.com/issues/2)
-##[disabled]
+##button类型input的disabled
 ```input[type=button][disabled]
   opacity 1```
 重设ios渲染的默认opacity=0.4
@@ -146,26 +154,6 @@ body{overflow-x:hidden;}
 特别是Z轴的移位会导致一些问题，慎用。
 ##max-device-width/max-width
 MX2不支持 `max-device-width`
-##禁止浏览器自动填充表单
-pc或手机的chrome浏览器中浏览器会根据表单的name自动填充域名下的表单项。解决方法：
-
-1. h5的 `autocomplete="off"`  
-	无效（但可以加上，也许有浏览器支持）
-2. 清除输入框内容  
-	无效（填充是发生在页面完全加载完）	
-3. 将type=password改为text
-	不推荐
-4. 让浏览器填充隐藏的输入框
-
-```
-<input type="tel" name="phone" style="display:none;">
-<input type="tel" name="phone" maxlength="11" autocomplete="off"> 
-<input type="password" name="password" style="display:none;">
-<input type="password" name="password" maxlength="11" autocomplete="off">
-```
-此方法可解决pc端chrome浏览器问题，效果是浏览器会弹出保存密码modal，但只会填充到隐藏的输入框里。
-
-但mobile的chrome浏览器仍然会填充到显示出的输入框中，因此只能将from去掉以结局。
 ##input与line-height
 注：input元素设置line-height控制高度时，mx2的光标高度等于line-height，可改为
 
