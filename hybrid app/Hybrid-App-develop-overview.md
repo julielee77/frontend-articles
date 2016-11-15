@@ -1,6 +1,11 @@
 #Hybrid App开发概述
 移动端网页开发主要考虑**webkit内核的浏览器**（hybird App主要）和chrome，uc,qq,小米浏览器---测试的重点
 
+- [前言](#前言)
+- [webview](#webview)
+- [特点](#特点)
+- [优势](#优势)
+
 ##前言
 移动端网页开分为三种模式：
 
@@ -17,7 +22,73 @@
 3.	Hybrid App
 
 	Hybrid APP包括Andriod或ios开发的原生部分和在其webview中打开的html5页面（如微信网页）
+	
+##webview
+webview做为承载网页的载体控件，可以将视为客户端系统内置的浏览器，它使用了webkit渲染引擎加载显示网页。
 
+WebView 在网页显示的过程中会产生一些事件，并回调给应用程序，以便在网页加载过程中做应用程序想处理的事情。
+
+WebView提供两个事件回调类给应用层——
+
+- WebViewClient 提供网页加载各个阶段的通知
+- WebChromeClient 提供网页加载过程中提供的数据内容
+
+**webview与js交互：**
+
+1. webview调用js
+	
+	```
+	mWebview.loadUrl("javascript:do()");
+	```
+	
+	webview调用js中do方法。
+2. js调用webview
+
+	android或ios开放某些特定接口供javascript调用，即UIViewController中的代码中的代码（Native）。
+		
+	js是不能直接调用native的method所以，需要借助uiwebview的代理方法
+	
+	```
+	(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+	```
+	每次在重新定向URL的时候，这个方法就会被触发。webviewJavascriptBridge 也是利用这个方法实现的。
+
+	假设以下本地类给js调用
+		
+	```
+	/*andriod */
+	package com.test.webview;
+	class DemoJavaScriptInterface {
+	  DemoJavaScriptInterface() {
+	  }
+	  /**
+	   * This is not called on the UI thread. Post a runnable to invoke
+	   * loadUrl on the UI thread.
+	   */
+	  public void clickOnAndroid() {
+	      mHandler.post(new Runnable() {
+	    public void run() {
+	        //TODO
+	    }
+	      });
+	  }
+	    }
+	```
+	首先给webview设置：
+	
+	```
+	/*andriod */
+	mWebview.setJavaScriptEnabled(true);
+	```
+	
+	接着将本地的类映射出去：
+	
+	```
+	/*andriod */
+	mWebView.addJavascriptInterface(new DemoJavaScriptInterface(), "demo");
+	```
+	
+	以上实现demo类公布出去供js调用。
 ##特点
 1.  资源大部分以file开头，本地、网络资源使用js异步接口和native获取，再和js的接口交互
 2.  js调用native功能
