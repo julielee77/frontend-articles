@@ -38,6 +38,7 @@ WebView提供两个事件回调类给应用层——
 1. webview调用js
 	
 	```
+	/*andriod */
 	mWebview.loadUrl("javascript:do()");
 	```
 	
@@ -49,6 +50,7 @@ WebView提供两个事件回调类给应用层——
 	js是不能直接调用native的method所以，需要借助uiwebview的代理方法
 	
 	```
+	/*andriod */
 	(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 	```
 	每次在重新定向URL的时候，这个方法就会被触发。webviewJavascriptBridge 也是利用这个方法实现的。
