@@ -3,11 +3,11 @@
 
 参考[HTML5的javascript touch事件](http://hedgehogking.com/?p=556)
 ##主要涉及知识点
-1. 移动端touch方法
+1. 移动端touch事件
 2. 阻止ios左右滑默认事件
 
 ##touch事件
-touch事件只能用addEventListener方式绑定。
+touch事件只能用addEventListener方式绑定（2016.07）。
 
 1. ###touchstart
 	触摸开始
