@@ -94,9 +94,10 @@ WebView提供两个事件回调类给应用层——
 1.  资源大部分以file开头，本地、网络资源使用js异步接口和native获取，再和js的接口交互
 2.  js调用native功能
 
-	(1)	让native监控一系列特殊的url请求，再在native中调用相应的功能或者提供数据接口，数据的提供方式类似JSONP
-	
-	(2)	类似Apache cordova（驱动phonegap的核心引擎，从phonegap抽出的核心代码贡献给apache）	提供设备相关API、js类库以及这些类库相关的设备原生后台代码。
+	- 让native监控一系列特殊的url请求，再在native中调用相应的功能或者提供数据接口，数据的提供方式类似JSONP
+	- 类似Apache cordova（驱动phonegap的核心引擎，从phonegap抽出的核心代码贡献给apache）
+		
+		提供设备相关API、js类库以及这些类库相关的设备原生后台代码。
 
 ##优势
 1.  可以指定什么版本的webview，用什么内核，拥有什么等级的安全权限等等 
