@@ -1,5 +1,9 @@
 #常用算法／功能的javascript实现
-##排序算法
+－ [算法](#算法)
+－ [功能函数](#功能函数)
+－ [效果实现](#效果实现)
+##算法
+###排序算法
 1. 冒泡排序
 
 	基本思想：每轮循环找出最小值（或最大值），每次比较两个相邻的元素，若顺序错误则交换。时间复杂度为O(N^2)
@@ -23,7 +27,7 @@
 2. 插入排序
 	插入排序分为直接插入排序和折半插入排序，这里讨论直接插入排序。
 	
-	基本思想：
+	基本思想：每轮将当前元素及在前的元素排序，即当前元素从右至左依次与在前的元素比较，若顺序错误则插入。
 	
 	```
 	function insertionSort(arr) {
@@ -42,7 +46,8 @@
 	```
 
 其它排序算法：桶排序、快速排序（每次将一个基准数归位）
-##数据类型判断
+##功能函数
+###数据类型判断
 1. typeof =>string number boolean undefined function object 
 2. object类型再进一步判断，可使用
 
@@ -63,5 +68,66 @@ function identifyType(val) {
 }
 }
 ```	
+##效果实现
+##变速动画（js）
+实现思路：对所有属性变化设置一个定时器，并设置一个标志符来标记是否停止。
+
+```
+/*obj--- DOMElement
+ **json -- 动画属性数据，如{"width":"300px"}
+ **fn -- callback function
+ */
+function changeAttr(obj, json, fn) {
+  clearInterval(obj.timer);
+  obj.timer = setInterval(function() {
+    var bStop = true; //动画停止标志，当全部属性到达最终值时停止
+    for (var attr in json) {
+      var curAttr = getStyle(obj, attr);
+      curAttr = attr == 'opacity' ? parseFloat(curAttr) : parseInt(curAttr);
+      var value = json[attr];
+      var speed = 0;
+      if (attr == 'opacity') {
+        if (Math.abs(value - curAttr) <= 0.05) {
+          curAttr = value;
+        } else {
+          speed = parseInt(parseFloat(value - curAttr) * 100 / 10);
+        }
+        obj.style[attr] = curAttr + speed / 100;
+        obj.style.filter = 'alpha(opacity=' + curAttr * 100 + speed + ')';
+      } else {
+        if (Math.abs(value - curAttr) <= 10) {
+          curAttr = value;
+        } else {
+          speed = parseInt((value - curAttr) / 5);
+        }
+        obj.style[attr] = curAttr + speed + 'px';
+      }
+      if (value - curAttr) {
+        bStop = false;
+      }
+    }
+    if (bStop) {
+      clearInterval(obj.timer);
+      if (fn) {
+        fn();
+      }
+    }
+  }, 100);
+}
+```
+并封装getStyle(obj,attr)获取DOMElement的属性值。其实现如下：
+
+```
+function getStyle(obj, attr) {
+  if (obj.currentStyle) { //IE
+    if (attr == 'opacity') {
+      return obj.currentStyle.filter.match(/^d+/) / 100; //=>0.3 format
+    }
+    return obj.currentStyle[attr];
+  } else { //现代浏览器
+    return getComputedStyle(obj, null)[attr];
+  }
+}
+```
 	
 
