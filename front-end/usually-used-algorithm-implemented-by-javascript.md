@@ -73,16 +73,16 @@ function identifyType(val) {
 实现思路：对所有属性变化设置一个定时器，并设置一个标志符来标记是否停止。
 
 ```
-/*obj--- DOMElement
+/*ele--- DOMElement
  **json -- 动画属性数据，如{"width":"300px"}
  **fn -- callback function
  */
-function changeAttr(obj, json, fn) {
-  clearInterval(obj.timer);
-  obj.timer = setInterval(function() {
+function changeAttr(ele, json, fn) {
+  clearInterval(ele.timer);
+  ele.timer = setInterval(function() {
     var bStop = true; //动画停止标志，当全部属性到达最终值时停止
     for (var attr in json) {
-      var curAttr = getStyle(obj, attr);
+      var curAttr = getStyle(ele, attr);
       curAttr = attr == 'opacity' ? parseFloat(curAttr) : parseInt(curAttr);
       var value = json[attr];
       var speed = 0;
@@ -92,22 +92,22 @@ function changeAttr(obj, json, fn) {
         } else {
           speed = parseInt(parseFloat(value - curAttr) * 100 / 10);
         }
-        obj.style[attr] = curAttr + speed / 100;
-        obj.style.filter = 'alpha(opacity=' + curAttr * 100 + speed + ')';
+        ele.style[attr] = curAttr + speed / 100;
+        ele.style.filter = 'alpha(opacity=' + curAttr * 100 + speed + ')';
       } else {
         if (Math.abs(value - curAttr) <= 10) {
           curAttr = value;
         } else {
           speed = parseInt((value - curAttr) / 5);
         }
-        obj.style[attr] = curAttr + speed + 'px';
+        ele.style[attr] = curAttr + speed + 'px';
       }
       if (value - curAttr) {
         bStop = false;
       }
     }
     if (bStop) {
-      clearInterval(obj.timer);
+      clearInterval(ele.timer);
       if (fn) {
         fn();
       }
@@ -118,14 +118,14 @@ function changeAttr(obj, json, fn) {
 并封装getStyle(obj,attr)获取DOMElement的属性值。其实现如下：
 
 ```
-function getStyle(obj, attr) {
-  if (obj.currentStyle) { //IE
+function getStyle(ele, attr) {
+  if (ele.currentStyle) { //IE
     if (attr == 'opacity') {
-      return obj.currentStyle.filter.match(/^d+/) / 100; //=>0.3 format
+      return ele.currentStyle.filter.match(/^d+/) / 100; //=>0.3 format
     }
-    return obj.currentStyle[attr];
+    return ele.currentStyle[attr];
   } else { //现代浏览器
-    return getComputedStyle(obj, null)[attr];
+    return getComputedStyle(ele, null)[attr];
   }
 }
 ```
