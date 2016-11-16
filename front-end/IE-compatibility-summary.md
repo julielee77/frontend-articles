@@ -183,13 +183,14 @@ IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug�
 		    <td>event.charCode IE8-</td>
 		  </tr>
 		</table> 
+		
 		setCapture/releaseCapture IE8-专用
 	- 事件绑定
 	
 	    DOM 2级事件
 		```
 		myBtn.attachEvent('onclick',myFunc);  //IE8-
-		myBtn.addEventListener('click',myFunc,?capture); //其它
+		myBtn.addEventListener('click',myFunc,?isCapture); //现代浏览器
 		```	
 3. ajax
 
