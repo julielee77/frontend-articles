@@ -146,6 +146,7 @@
 
 - ###inline元素
 	**高度依浏览器而异**
+	
 	inline元素设置 `line-height`后，与其高度不相等，不同浏览器渲染有差异。因此，设置inline元素 `float`或子元素相对于其定位时，均会出现问题。
 	
 	可将元素设置为 `inline-block`以解决此类问题。若需垂直居中，可再添加 `vertical-align:middle`。
@@ -155,10 +156,12 @@
 	inline-block/inline-table类型（IE8+支持）属于block类型，具有 inline元素的特性，即一行可显示多个且换行符有间隙。
 - ###margin
 	**百分比单位**
+	
 	普通元素的margin百分比相对于容器的宽度
 	
 	absolute元素margin百分比相对于有定位属性的最近祖先元素的宽度
 	**block元素垂直margin重叠**
+	
 	即两个垂直margin相遇时，将形成一个外边距，值等于两者中的绝对值较大者。
 	
 	分为以下三种情形：
@@ -176,6 +179,7 @@
 	
 	inline/inline-block元素间的空格／回车会形成一定的默认margin。（回车可使用 `<!-- -->`消除）
 	**display为table相关的元素（非替换元素）相关margin无效**
+	
 	**绝对定位元素非定位方位的margin值“无效”**
 - ###border
 	`border:none` 不渲染，但有兼容性问题（IE6/7），可同时设置`background:none`。
