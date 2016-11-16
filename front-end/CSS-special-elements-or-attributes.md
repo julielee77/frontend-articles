@@ -142,7 +142,7 @@
 - 不可继承的： `display`、`margin`、`border`、`padding`、`background`、`height`、`min-height`、`max-height`、`width`、`min-width`、`max-width`、`overflow`、`position`、`left`、`right`、`top`、 `bottom`、`z-index`、`float`、`clear`、`table-layout`、`vertical-align`、`page-break-after`、 `page-bread-before`和`unicode-bidi`
 
 ##box-model
-注：普通某种类型元素，指无定位／浮动等的非替换元素（img/input/button等）
+注：普通某种类型元素，指无特殊定位／浮动等的非替换元素（img/input/button等）
 
 - ###inline元素
 	**高度依浏览器而异**
