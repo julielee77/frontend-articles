@@ -1,13 +1,12 @@
 #移动端h5问题探索(2)左右滑切换tab
-移动端h5开发经常会用到滑动效果，但浏览器并没有提供swipe事件，可以用touch模拟。注意必须采用javascript的addEventListener绑定监听事件。
+移动端h5开发经常会用到滑动效果，但浏览器并没有提供swipe事件，可以用touch事件模拟。注意必须采用javascript的addEventListener绑定监听事件。
 
 参考[HTML5的javascript touch事件](http://hedgehogking.com/?p=556)
 ##主要涉及知识点
 1. 移动端touch事件
-2. 阻止ios左右滑默认事件
+2. 阻止左右滑默认事件
 
 ##touch事件
-touch事件只能用addEventListener方式绑定（2016.07）。
 
 1. ###touchstart
 	触摸开始
@@ -21,7 +20,7 @@ touch事件只能用addEventListener方式绑定（2016.07）。
 	触摸结束	
 	
 4. ###touchcancel
-触摸取消（官方无详细说明，作为不支持touchend时的替代方案）
+	触摸取消（官方无详细说明，作为不支持touchend时的替代方案）
 
 注：touchend部分手机不支持，如小米4，可用touchcanel代替（iphone SE不支持，但支持touchend）。
 ##每个touch事件都包含了3个touch对象列表
