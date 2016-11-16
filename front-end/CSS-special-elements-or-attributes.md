@@ -58,6 +58,8 @@
 </table>
 
 **CSS3选择器包括通用兄弟选择器`~`和各种伪类选择器。**
+
+表达式中的参数n也写作如:nth-child(odd)/:nth-child(even)，表示 奇数／偶数顺序元素。
  
 <table>
 <caption>css3伪类选择器</caption>
@@ -67,8 +69,8 @@
     <td>文档根元素html</td>
   </tr>
   <tr>
-    <td>:nth-child()／:nth-last-child()</td>
-    <td>:nth-child(odd)/:nth-child(even) 奇数／偶数顺序元素</td>
+    <td>:nth-child(n)／:nth-last-child(n)</td>
+    <td></td>
   </tr>
   <tr>
     <td>:nth-of-type(n)</td>
