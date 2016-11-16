@@ -46,9 +46,9 @@ var clientWidth=(document.documentElement||document.body).clientWidth
 
 scrollTop/scrollLeft可设置（无px单位），使DOM元素滚动到某处。		
 ###element.classList
-支持IE10+，Android 2.3（不包括）+
+使用className属性操作class时，需要考虑元素原有class。而classList属性返回class的数组，有`add()`、 `remove()` 、`toggle()`、 `contains()`、 `item(index)`、 `length`等方法和属性。
 
-API `length`, `item`, `add`, `remove`, `contains`, `toggle`
+支持IE10+，Android 2.3（不包括）+。
 
 ###阻止事件默认行为
 - `event.preventDefault()`
@@ -67,7 +67,7 @@ API `length`, `item`, `add`, `remove`, `contains`, `toggle`
 `element.blur()`基本不会用，因为当需要改变聚焦元素直接调用 `element.focus()`即可，对于不支持直接 `focus()`的环境先调用 `blur()`也解决不了（如ios）。
 ###window.reload()
 刷新页面
-###getComputedStyle
-支持IE9+/chrome/firefox，IE8-对应的方位为 `element.currentStyle`。
+###getComputedStyle()
+支持IE9+/chrome/firefox，IE8-对应的方法为 `element.currentStyle`。
 
-`getComputedStyle(obj,null).height` 获取的是原始值，包括auto/%。 可用 `element.clientHeight`获取计算后的px值。
+`getComputedStyle(element,null).height` 获取的是原始值，包括auto/%。 可用 `clientHeight`、`offsetHeight`获取计算后的px。值。
