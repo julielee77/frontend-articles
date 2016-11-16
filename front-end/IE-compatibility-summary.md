@@ -119,7 +119,7 @@ IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug�
     <tr>
       <td>获取／设置属性</td>
       <td>getAttribute()/setAttribute()/attributes[index]</td>
-      <td>IE7-能使用element.href获取／设置</td>
+      <td>IE7-只能使用element.href获取／设置</td>
     </tr>
   </table>
 	 
