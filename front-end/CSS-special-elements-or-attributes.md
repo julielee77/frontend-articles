@@ -31,7 +31,7 @@
 	- 伪元素
 		
 		 `::first-letter`, `::first-line`, `::before`, `::after`
-	 - 属性选择器
+	- 属性选择器
 
 <table>
 <caption>属性选择器匹配示例</caption>
