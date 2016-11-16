@@ -12,16 +12,25 @@
 
 选择器权重：（1）通用* 0.01（2）继承 0.1（3）标签 1（4）类 10（5）id 100（6）!important最高
 
+css2 选择器分类：
+1. 基本选择器 
 
-选择器分类：（1）基本选择器（2）层次选择器（3）过滤选择器
+	标签、ID、class
+2. 层次选择器
 
-- 后代选择器、子代选择器`>`、兄弟选择器`+`、通配选择器`*`
-- 链接静态伪类： `:link`, `:visited`
-- 动态伪类：  `:hover`, `:active`, `:focus`
-- 结构伪类： `:first-child`, `:last-child`
-- 其它伪类： `:left`, `:right`(仅用于@page规则，与装订线相关),     `:lang`
-- 伪元素： `::first-letter`, `::first-line`, `::before`, `::after`
-- CSS3选择器 通用兄弟选择器`~`、各种伪类选择器
+	后代、子代`>`、兄弟`+`
+3. 过滤选择器
+	- 通配符`*`
+	- 伪类
+		- 静态伪类： `:link`, `:visited`
+		- 动态伪类：  `:hover`, `:active`, `:focus`
+		- 结构伪类： `:first-child`, `:last-child`
+		- 其它伪类： `:left`, `:right`(仅用于@page规则，与装订线相关),     `:lang`
+
+	- 伪元素
+		
+		 `::first-letter`, `::first-line`, `::before`, `::after`
+	 - 属性选择器
 
 <table>
 <caption>属性选择器匹配示例</caption>
@@ -47,8 +56,10 @@
   </tr>
 </table>
 
+ CSS3选择器包括通用兄弟选择器`~`和各种伪类选择器。
+ 
 <table>
-<caption>伪类选择器</caption>
+<caption>css3伪类选择器</caption>
   <tr>
     <td rowspan="9">结构性伪类</td>
     <td>:root</td>
