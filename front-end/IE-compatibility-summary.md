@@ -89,9 +89,9 @@ IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug�
 		IE8-无内置Node对象。
 	- 查找元素
 	
-		`querySeletor`/ `querySeletorAll` IE7~10只支持CSS2选择器，IE6-不支持。
+		`querySeletor`/ `querySeletorAll` IE7~10只支持CSS2选择器，IE6-不支持此方法。
 		
-		`getElementsByClassName` IE10-不支持	
+		`getElementsByClassName` IE10-不支持。	
 	- 核心DOM操作
 	
 		`setAtrribute()` IE7-不支持，操作属性多使用HTML DOM方法。
