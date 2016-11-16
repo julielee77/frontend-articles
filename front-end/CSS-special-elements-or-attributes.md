@@ -8,7 +8,7 @@
 - [unusual attributes](#unusual-attributes)
 
 ##selectors
-由选择器的层叠和权重决定最终有效样式。（《css权威指南》中sepecifity的解释方法，与此类似）
+元素的最终有效样式由选择器的层叠和权重决定。（《css权威指南》中sepecifity的解释方法，与此类似）
 
 选择器权重：（1）通用* 0.01（2）继承 0.1（3）标签 1（4）类 10（5）id 100（6）!important最高
 
