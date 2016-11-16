@@ -114,8 +114,13 @@ IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug�
       <td></td>
     </tr>
     <tr>
-      <td>获取／设置属性</td>
-      <td>getAttribute()/setAttribute()/attributes[index]</td>
+      <td>拷贝节点</td>
+      <td>cloneNode()</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>获取／设置/创建属性</td>
+      <td>getAttribute()/setAttribute()/createAttribute()/attributes[index]</td>
       <td>IE7-只能使用element.href获取／设置</td>
     </tr>
     <tr>
@@ -158,23 +163,22 @@ IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug�
 		  </tr>
 		  <tr>
 		    <td>阻止默认事件</td>
-		    <td>event.preventDefault();</td>
-		    <td>event.returnValue=false;</td>
+		    <td>event.preventDefault()</td>
+		    <td>event.returnValue=false</td>
 		  </tr>
 		  <tr>
-		    <td>阻止事件冒泡</td>
-		    <td>event.stopPropagation();</td>
-		    <td>event.cancelBubble=true;</td>
+		    <td>阻止事件传播</td>
+		    <td>event.stopPropagation()</td>
+		    <td>event.cancelBubble=true</td>
 		  </tr>
 		  <tr>
 		    <td>事件源</td>
-		    <td>event.target  ff</td>
-		    <td>event.srcElement  IE8-</td>
+		    <td>event.target  ff/chorme</td>
+		    <td>event.srcElement  IE8-/chrome</td>
 		  </tr>
 		  <tr>
 		    <td>按键码</td>
-		    <td>event.keyCode
-		    Event.which  ff</td>
+		    <td>event.keyCode/Event.which  ff/chrome</td>
 		    <td>event.charCode IE8-</td>
 		  </tr>
 		</table> 
