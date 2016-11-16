@@ -72,46 +72,80 @@ IE8-一般不支持HTML5和CSS3，以下将不讨论。
 ###DOM
 IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug。
 
-1. DOM元素
-	- 节点树和元素树
+1. 节点树和元素树
 	
-		IE不支持元素树。对于节点树，IE与其它浏览器的解析不同，其它浏览器会包含Text节点。
-		
-		**获取元素子节点**
-		- 标准属性`element.childNodes`
-		
-			Chrome、Firefox、IE9+等标准浏览器下，获取到ElementNode和TextNode，它会将空格符、回车符、换行符也看做一个文本节点，而IE8-则会无视空格、回车符。
-		
-		- 非标准属性`element.children`
-		
-			不包含TextNode。但IE6会包含CommentNode。
-		
-		IE8-无内置Node对象。
-	- 查找元素
+	IE不支持元素树。对于节点树，IE与其它浏览器的解析不同，其它浏览器会包含Text节点。IE8-无内置Node对象。
 	
+	获取节点时，Chrome、Firefox、IE9+等标准浏览器下，获取到ElementNode和TextNode，它会将空格符、回车符、换行符也看做一个文本节点，而IE8-则会无视空格、回车符。
+	
+	<table>
+    <caption>DOM操作相关属性／方法</caption>
+    <tr>
+      <th>功能</th>
+      <th>属性／方法</th> 
+      <th>说明</th>
+    </tr>
+    <tr>
+      <td>获取子节点</td>
+      <td> 
+        <p>`childNodes`标准属性</p>
+        <p>`children` 非标准属性</p>
+        </td>
+      <td>
+        <p>`childNodes`</p>
+        <p>`children`不包含TextNode。但IE6会包含CommentNode。</p>
+      </td>
+    </tr>
+    <tr>
+    <tr>
+      <td>获取兄弟节点</td>
+      <td>nextSibling/previousSibling</td>
+      <td></td>
+    </tr>
+      <td>获取兄弟元素</td>
+      <td>nextElementSibling/previousElementSibling</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>获取某位置节点</td>
+      <td>firstChild/lastChild</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>获取某位置元素</td>
+      <td>firstElementChild/lastElementChild</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>获取／设置属性</td>
+      <td>getAttribute()/setAttribute()/attributes[index]</td>
+      <td>IE7-能使用element.href获取／设置</td>
+    </tr>
+  </table>
+	 
+	**查找元素**
+
 		`querySeletor`/ `querySeletorAll` IE7~10只支持CSS2选择器，IE6-不支持此方法。
-		
-		`getElementsByClassName` IE10-不支持。	
-	- 核心DOM操作
 	
-		`setAtrribute()` IE7-不支持，操作属性多使用HTML DOM方法。
-		<table>
-		  <tr>
-		    <td></td>
-		    <th>其它浏览器</th>
-		    <th>IE8-</th>
-		  </tr>
-		  <tr>
-		    <td>获取css style属性</td>
-		    <td>currentStyle</td>
-		    <td>getComputedStyle</td>
-		  </tr>
-		  <tr>
-		    <td>获取／设置文本内容</td>
-		    <td>innerText</td>
-		    <td>textContent</td>
-		  </tr>
-		</table>	
+	`getElementsByClassName` IE10-不支持。	
+
+	<table>
+	  <tr>
+	    <td></td>
+	    <th>IE8-</th>
+	    <th>现代浏览器</th>
+	  </tr>
+	  <tr>
+	    <td>获取css style属性</td>
+	    <td>currentStyle</td>
+	    <td>getComputedStyle</td>
+	  </tr>
+	  <tr>
+	    <td>获取／设置文本内容</td>
+	    <td>innerText</td>
+	    <td>textContent</td>
+	  </tr>
+	</table>	
 2. DOM事件
 	- 事件模型
 	
