@@ -77,7 +77,14 @@ IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug�
 	
 		IE不支持元素树。对于节点树，IE与其它浏览器的解析不同，其它浏览器会包含Text节点。
 		
-		`element.childNodes` IE6～8支持，IE9+和chrome不支持。
+		**获取元素子节点**
+		- 标准属性`element.childNodes`
+		
+			Chrome、Firefox、IE9+等标准浏览器下，获取到ElementNode和TextNode，它会将空格符、回车符、换行符也看做一个文本节点，而IE8-则会无视空格、回车符。
+		
+		- 非标准属性`element.children`
+		
+			不包含TextNode。但IE6会包含CommentNode。
 		
 		IE8-无内置Node对象。
 	- 查找元素
@@ -86,7 +93,8 @@ IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug�
 		
 		`getElementsByClassName` IE10-不支持	
 	- 核心DOM操作
-		setAtrribute IE7-不支持，操作属性多使用HTML DOM方法。
+	
+		`setAtrribute()` IE7-不支持，操作属性多使用HTML DOM方法。
 		<table>
 		  <tr>
 		    <td></td>
