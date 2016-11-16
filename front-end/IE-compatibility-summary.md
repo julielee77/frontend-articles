@@ -76,7 +76,7 @@ IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug�
 	
 	IE不支持元素树。对于节点树，IE与其它浏览器的解析不同，其它浏览器会包含Text节点。IE8-无内置Node对象。
 	
-	获取节点时，Chrome、Firefox、IE9+等标准浏览器下，获取到ElementNode和TextNode，它会将空格符、回车符、换行符也看做一个文本节点，而IE8-则会无视空格、回车符。
+	获取节点时，Chrome、Firefox、IE9+等现代浏览器下，获取到的是ElementNode和TextNode，它会将空格符、回车符、换行符也看做文本节点，而IE8-则会无视空格、回车符。
 	
 	<table>
     <caption>DOM操作相关属性／方法</caption>
@@ -141,7 +141,7 @@ IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug�
 	 
 	**查找元素**
 
-	`querySeletor`/ `querySeletorAll` IE7~10只支持CSS2选择器，IE6-不支持此方法。
+	`querySeletor()`/ `querySeletorAll()` IE7~10只支持CSS2选择器，IE6-不支持此方法。
 	
 	`getElementsByClassName` IE10-不支持。	
 	  
