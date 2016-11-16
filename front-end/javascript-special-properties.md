@@ -14,10 +14,10 @@
 	
 	`width` ／`height`
 	`availWidth` ／`availHeight`
-3.  其它尺寸
+3.  其它尺寸//TODO 待详细分析
 	- client
 		
-		＝ content－滚动距离+padding 无兼容问题
+		＝ content－滚动距离-滚动条（如果占据尺寸）+padding 无兼容问题
 		
 		`clientWidth` /`clientHeight` 
 		
