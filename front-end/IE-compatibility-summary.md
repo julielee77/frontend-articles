@@ -87,14 +87,10 @@ IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug�
     </tr>
     <tr>
       <td>获取子节点</td>
-      <td> 
-        <p>`childNodes`标准属性</p>
-        <p>`children` 非标准属性</p>
-        </td>
-      <td>
-        <p>`childNodes`</p>
-        <p>`children`不包含TextNode。但IE6会包含CommentNode。</p>
-      </td>
+      <td> `childNodes`标准属性
+      
+      `children` 非标准属性</td>
+      <td>`children`不包含TextNode。但IE6会包含CommentNode。  </td>
     </tr>
     <tr>
     <tr>
@@ -123,18 +119,16 @@ IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug�
     </tr>
     <tr>
       <td>获取css样式</td>
-      <td>
-        <p>currentStyle IE8-</p>
-        <p>getComputedStyle()</p>
-      </td>
+      <td>currentStyle IE8-
+      
+      getComputedStyle()</td>
       <td>获取非內联样式，设置时使用element.style.cssAtrr</td>
     </tr>
     <tr>
       <td>获取／设置文本内容</td>
-      <td>
-        <p>innerText IE8-</p>
-        <p>textContent</p>
-      </td>
+      <td>innerText IE8-
+      
+	  textContent</td>
       <td></td>
     </tr>
   </table>
