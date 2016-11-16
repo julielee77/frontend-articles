@@ -121,31 +121,30 @@ IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug�
       <td>getAttribute()/setAttribute()/attributes[index]</td>
       <td>IE7-只能使用element.href获取／设置</td>
     </tr>
+    <tr>
+      <td>获取css样式</td>
+      <td>
+        <p>currentStyle IE8-</p>
+        <p>getComputedStyle()</p>
+      </td>
+      <td>获取非內联样式，设置时使用element.style.cssAtrr</td>
+    </tr>
+    <tr>
+      <td>获取／设置文本内容</td>
+      <td>
+        <p>innerText IE8-</p>
+        <p>textContent</p>
+      </td>
+      <td></td>
+    </tr>
   </table>
 	 
 	**查找元素**
 
-		`querySeletor`/ `querySeletorAll` IE7~10只支持CSS2选择器，IE6-不支持此方法。
+	`querySeletor`/ `querySeletorAll` IE7~10只支持CSS2选择器，IE6-不支持此方法。
 	
 	`getElementsByClassName` IE10-不支持。	
-
-	<table>
-	  <tr>
-	    <td></td>
-	    <th>IE8-</th>
-	    <th>现代浏览器</th>
-	  </tr>
-	  <tr>
-	    <td>获取css style属性</td>
-	    <td>currentStyle</td>
-	    <td>getComputedStyle</td>
-	  </tr>
-	  <tr>
-	    <td>获取／设置文本内容</td>
-	    <td>innerText</td>
-	    <td>textContent</td>
-	  </tr>
-	</table>	
+	  
 2. DOM事件
 	- 事件模型
 	
