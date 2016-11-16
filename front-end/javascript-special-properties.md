@@ -46,9 +46,9 @@ var clientWidth=(document.documentElement||document.body).clientWidth
 
 scrollTop/scrollLeft可设置（无px单位），使DOM元素滚动到某处。		
 ###element.classList
-使用className属性操作class时，需要考虑元素原有class。而classList属性返回class的数组，有`add()`、 `remove()` 、`toggle()`、 `contains()`、 `item(index)`、 `length`等方法和属性。
+使用className属性操作class时，需要考虑元素原有class。而classList属性返回所有class的数组，有`add()`、 `remove()` 、`toggle()`、 `contains()`、 `item(index)`、 `length`等方法和属性。且每次只能添加／删除一个类。
 
-支持IE10+，Android 2.3（不包括）+。
+支持IE10+，Android 3+（4.4+完全支持）。
 
 ###阻止事件默认行为
 - `event.preventDefault()`
