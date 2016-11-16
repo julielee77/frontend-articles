@@ -62,25 +62,17 @@
 <table>
 <caption>css3伪类选择器</caption>
   <tr>
-    <td rowspan="9">结构性伪类</td>
+    <td rowspan="7">结构性伪类</td>
     <td>:root</td>
     <td>文档根元素html</td>
   </tr>
   <tr>
-    <td>:nth-child(n)</td>
+    <td>:nth-child()／:nth-last-child()</td>
     <td>:nth-child(odd)/:nth-child(even) 奇数／偶数顺序元素</td>
-  </tr>
-  <tr>
-    <td>:nth-last-child()</td>
-    <td></td>
   </tr>
   <tr>
     <td>:nth-of-type(n)</td>
     <td>同类型中第n个同级兄弟元素</td>
-  </tr>
-  <tr>
-    <td>:first-child/ :last-child</td>
-    <td></td>
   </tr>
   <tr>
     <td>:first-of-type/ :last-of-type</td>
