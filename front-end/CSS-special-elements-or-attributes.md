@@ -160,6 +160,7 @@
 	普通元素的margin百分比相对于容器的**宽度**
 	
 	absolute元素margin百分比相对于有定位属性的最近祖先元素的宽度
+	
 	**block元素垂直margin重叠**
 	
 	即两个垂直margin相遇时，将形成一个外边距，值等于两者中的绝对值较大者。
@@ -178,6 +179,7 @@
 	普通inline元素只有水平margin有效。
 	
 	inline/inline-block元素间的空格／回车会形成一定的默认margin。（回车可使用 `<!-- -->`消除）
+	
 	**display为table相关的元素（非替换元素）相关margin无效**
 	
 	**绝对定位元素非定位方位的margin值“无效”**
@@ -187,7 +189,9 @@
 	`border:0` 会渲染，因此会占用内存，但无兼容问题。
 - ###outline
 	位于边框边缘的外围，不占据空间。
+	
 	IE／Firefox/chrome默认点击 `a`/ `button`会出现一个轮廓框。 (现代浏览器已解决)
+	
 	 `outline`的none值与0值表现基本同 `border`，但考虑到用户体验PC端不建议去除。
 	
 	```
@@ -217,6 +221,7 @@
 		
 		
 		因而独立无依赖absolute元素（尤其是跟随性）可实现很多效果。
+		
 		```
 		div{
 		  position:absolute;top:0;right:0;bottom:0;left:0;
