@@ -189,8 +189,56 @@ IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug�
 	    DOM 2级事件
 		```
 		myBtn.attachEvent('onclick',myFunc);  //IE8-
-		myBtn.addEventListener('click',myFunc,?isCapture); //现代浏览器
+		myBtn.addEventListener('click',myFunc,?isCapture); //现代浏览器		
 		```	
+	- DOMContentLoaded  IE8- 不支持
+	
+		window的load事件则在全部资源加载完毕时才触发，DOM 3级标准推出了	DOMContentLoaded优化了这个过程。当文档加载解析完毕且所有延迟脚本都执行完毕时会触发DOMContentLoaded事件，此时图片和异步资源可能依旧在加载，但文档已经为操作准备就绪了。
+		
+		 DOM的兼容ready实现（大概同 jQuery）
+		 
+		```
+		 function domReady(fn) {
+		  //现代浏览器
+		  if (document.addEventListener) {
+		    document.addEventListener('DOMContentLoaded', fn, false);
+		  } else {
+		    IEContentLoaded(fn);
+		  }
+		  //IE模拟DOMContentLoaded
+		  function IEContentLoaded(fn) {
+		    var d = document,
+		      done = false;
+		    //执行一次用户回调函数init()
+		    function init() {
+		      if (!done) {
+		        done = true;
+		        fn();
+		      }
+		    }
+		    //立即执行hack
+		    (function() {
+		      try {
+		        d.documentElement.doScroll('left');
+		      } catch (e) {
+		        //延迟再试一次
+		        setTimeout(arguments.callee, 50);
+		        return;
+		      }
+		      //直到没有错误
+		      init();
+		    })();
+		    //监听document的加载状态
+		    d.onreadystatechange = function() {
+		      //如果用户是在domReady之后绑定的函数，就立马执行
+		      if (d.readyState == 'complete') {
+		        d.onreadystatechange = null;
+		        init();
+		      }
+		    };
+		  }
+		}
+		 ```
 3. ajax
 
 	IE6-不兼容Ajax的XMLHttpRequest对象，使用ActiveXobject。
