@@ -68,6 +68,69 @@ function identifyType(val) {
 }
 }
 ```	
+###native js实现ajax
+运用用XMLHttpRequest对象的方法和事件实现，但需注意IE6-的兼容性。
+
+以下将其实现封装到一个构造函数中。
+
+```
+var XMLHttp = function() {
+  var xhr;
+  if (window.XMLHttPRequest) { //现代浏览器
+    xhr = new XMLHttPRequest();
+  } else if (window.ActiveXObject) { //IE6-
+    xhr = new ActiveXObject();
+  }
+  if (xhr === undefined || xhr === null) { //其它不支持情况报错
+    throw new Error('创建AMLHttpRequest对象失败');
+  } else {
+    return xhr;
+  }
+};
+XMLHttp.prototype.send = function(url, method, async, data, fn) {
+  var params = null;
+  if (method.toUpperCase() === 'GET') {
+    //GET方法需处理传递参数
+    if (data !== undefined || data !== null) {
+      url += '?' + parseData(data);
+    }
+  } else {
+    params = JSON.stringify(data);
+    //POST方法设置请求头
+    this.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  }
+  //建立连接
+  this.open(url, method, async);
+  //发送请求及其数据
+  this.send(params);
+  //监听XMLHttpRequest对象的状态
+  this.onreadystatechange = function() {
+    //当请求完成，且状态为200 OK时，接收数据并处理
+    if (this.readyState == 4 && this.status == 200) {
+      fn(this.responseText);
+    }
+  };
+  /*parse data
+   ** data 可能为string或object
+   */
+  function parseData(data) {
+    if (data === undefined || data === null) {
+      return;
+    }
+    if (typeof data == 'string') {
+      return data;
+    }
+    var str = '';
+    for (var attr in data) {
+      if (data.hasOwnProperty(attr)) {
+        str += attr + '=' + data[attr] + '&';
+      }
+    }
+    str = str.slice(0, -1);
+    return str;
+  }
+};
+```
 ##效果实现
 ##变速动画（js）
 实现思路：对所有属性变化设置一个定时器，并设置一个标志符来标记是否停止。
