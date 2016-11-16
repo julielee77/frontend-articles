@@ -34,7 +34,7 @@
 	- 属性选择器
 
 <table>
-<caption>属性选择器匹配示例</caption>
+<caption>属性选择器匹配示例（css2部分支持）</caption>
   <tr>
     <td>p[class~="myClass"]</td>
     <td>附带class属性的p元素，且class值列表包含myClass</td>
