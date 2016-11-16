@@ -59,8 +59,8 @@
     <td>第n个子元素</td>
   </tr>
   <tr>
-    <td>:nth-last-child(n)</td>
-    <td>倒数第n个子元素</td>
+    <td>:nth-last-child()</td>
+    <td>:nth-child(odd)/:nth-child(even) 奇数／偶数顺序元素</td>
   </tr>
   <tr>
     <td>:nth-of-type(n)</td>
