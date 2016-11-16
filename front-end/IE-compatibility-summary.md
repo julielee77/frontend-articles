@@ -193,7 +193,7 @@ IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug�
 		```	
 3. ajax
 
-	解决IE6-不兼容Ajax的XMLHttpRequest（其它浏览器），使用ActiveXobject
+	IE6-不兼容Ajax的XMLHttpRequest对象，使用ActiveXobject。
 4. window.close()
 
 	IE下提示是否需要关闭，ff无法执行并报错（不能关闭非脚本打开的页面）		
