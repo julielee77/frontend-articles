@@ -23,10 +23,12 @@
 
 	Hybrid APP包括Andriod或ios开发的原生部分和在其webview中打开的html5页面（如微信网页）
 	
+	以下讨论Hybrid App。
+	
 ##webview
-webview做为承载网页的载体控件，可以将视为客户端系统内置的浏览器，它使用了webkit渲染引擎加载显示网页。
+webview做为承载网页的载体控件，可以将其视为客户端系统内置的浏览器，它使用了webkit渲染引擎加载显示网页。
 
-WebView 在网页显示的过程中会产生一些事件，并回调给应用程序，以便在网页加载过程中做应用程序想处理的事情。
+WebView在网页显示的过程中会产生一些事件，并回调给应用程序，以便在网页加载过程中做应用程序想处理的事情。
 
 WebView提供两个事件回调类给应用层——
 
@@ -45,9 +47,9 @@ WebView提供两个事件回调类给应用层——
 	webview调用js中do方法。
 2. js调用webview
 
-	android或ios开放某些特定接口供javascript调用，即UIViewController中的代码中的代码（Native）。
+	android或ios开放某些特定接口供javascript调用，即UIViewController中的代码（Native）。
 		
-	js是不能直接调用native的method所以，需要借助uiwebview的代理方法
+	js是不能直接调用native的method，所以需要借助uiwebview的代理方法
 	
 	```
 	/*andriod */
