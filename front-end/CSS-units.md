@@ -188,7 +188,7 @@ pc或手机的chrome浏览器中浏览器会根据表单的name自动填充域�
 ##页脚自适应居底
 使用flexbox方法
 ```
-header,footer
+body
   display flex
   min-height 100vh
   flex-direction column
