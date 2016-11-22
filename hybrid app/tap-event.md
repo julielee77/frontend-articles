@@ -2,7 +2,7 @@
  由于移动端click事件有300ms的延迟，推荐用tap事件代替。
  
 ##定义 
-当touchstart发生后，并touchend，且没有touchmove时，即认为一个tap事件。
+当touchstart/touchend发生时，如果手指为同一位置且没有touchmove时，即认为一个tap事件。
 ##tap“穿透”
 现象：当使用tap事件让一个蒙层消失时，会触发蒙层覆盖部分的click事件。
 
