@@ -1,7 +1,10 @@
 #移动端h5问题探索(2)左右滑切换tab
 移动端h5开发经常会用到滑动效果，但浏览器并没有提供swipe事件，可以用touch事件模拟。注意必须采用javascript的addEventListener绑定监听事件。
 
+此外，移动端click事件有300ms的延迟，推荐用tap/touch事件代替。
+
 参考[HTML5的javascript touch事件](http://hedgehogking.com/?p=556)
+
 ##主要涉及知识点
 1. 移动端touch事件
 2. 阻止左右滑默认事件
