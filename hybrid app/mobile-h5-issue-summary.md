@@ -92,6 +92,7 @@
     border-bottom 1px solid gray-4
     vendor transform scaleY(.5)
     vendor transform-origin 0 0  ```
+在ios8中支持`border:0.5px`
 ##border-radius
 ###Android2.3不支持％
 会将50%写成一个较大的值，如：
