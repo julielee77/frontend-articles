@@ -1,11 +1,12 @@
 #css特殊元素／属性总结
-- [seletors](#selectors)
+- [seletor](#selector)
 - [inheritance](#inheritance)
 - [box-model](#box-model)
 - [positioning](#positioning)
 - [text](#text)
 - [color](#color)
 - [unusual attributes](#unusual-attributes)
+- [css3 features](#css3-features)
 
 ##selectors
 元素的最终有效样式由选择器的层叠和权重决定。（《css权威指南》中sepecifity的解释方法，与此类似）
@@ -16,12 +17,11 @@
 
 1. 基本选择器 
 
-	标签、ID、class
+	标签、ID、class、通配符`*`
 2. 层次选择器
 
-	后代、子代`>`、兄弟`+`
+	后代、子代`>`、相邻兄弟`+`
 3. 过滤选择器
-	- 通配符`*`
 	- 伪类
 		- 静态伪类： `:link`, `:visited`
 		- 动态伪类：  `:hover`, `:active`, `:focus`
@@ -58,8 +58,6 @@
 </table>
 
 **CSS3选择器包括通用兄弟选择器`~`和各种伪类选择器。**
-
-表达式中的参数n也写作如:nth-child(odd)/:nth-child(even)，表示 奇数／偶数顺序元素。
  
 <table>
 <caption>css3伪类选择器</caption>
@@ -120,6 +118,8 @@
     <td>--</td>
   </tr>
 </table>
+>Note:表达式中的参数n也写作如:nth-child(odd)/:nth-child(even)，表示 奇数／偶数顺序元素。
+
 ###:before,:after
 :before,:after插入的内容默认是一个行内元素，并且在HTML源代码中无法看到，这就是为什么被称之为伪元素的理由，所以也就无法通过DOM对其进行操作（可通过改变住元素的class）。
 ##inheritance
@@ -307,4 +307,23 @@ background: background-image || background-position/background-size || backgroun
 当元素不面向屏幕时是否可见
 ###transform-style:perserve-3d;
 存在兼容性问题	
+## css3 features
+1. 强大的css3选择器
+2. 实现特殊的视觉效果
+    - 背景的变革
+    - 圆角和边框
+    - 颜色与透明度
+3. 盒模型的变化
+4. 阴影效果
+5. 多列布局与弹性盒模型布局
+6. web字体与web font图标
+7. 盒模型的变形
+8. css3过渡和动画交互效果
+9. 媒体特性和自适应布局
+
+>Note: 2017.01.07  浏览器支持情况
+
+chrome已基本支持，firefox和safari支持绝大部分特性，IE9+支持大部分特性。
+
+firefox一直致力于开发与标准一致的浏览器，且做的很好。
 
