@@ -49,15 +49,20 @@
 其它排序算法：桶排序、快速排序（每次将一个基准数归位）
 ##功能函数
 ###数据类型判断
-1. typeof =>string number boolean undefined function object 
+1. typeof 
+
+	=>string number boolean undefined function object 
+	
+	注：typeof检测正则表达式时，IE／Firefox返回`object`，Safari／chrome返回`function`。
 2. object类型再进一步判断，可使用
 
 	- instanceof
 	- Obejct.prototype.toString().call =>[obejct array]…
 	- constructor
+	- Array.isArray() //ES5
 	
 ```
-//判断数据类型的简单实现
+// 判断数据类型的简单实现
 function identifyType(val) {
   var type = typeof val;
   //非object类型 string,boolean,number,undefined,function
