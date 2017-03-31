@@ -1,9 +1,9 @@
-#常用算法／功能的javascript实现
+# 常用算法／功能的javascript实现
 - [算法](#算法)
 - [功能函数](#功能函数)
 - [效果实现](#效果实现)
-##算法
-###排序算法
+## 算法
+### 排序算法
 1. 冒泡排序
 
 	基本思想：每轮循环找出最小值（或最大值），每次比较两个相邻的元素，若顺序错误则交换。时间复杂度为O(N^2)
@@ -47,8 +47,8 @@
 	```
 
 其它排序算法：桶排序、快速排序（每次将一个基准数归位）
-##功能函数
-###数据类型判断
+## 功能函数
+### 数据类型判断
 1. typeof 
 
 	=>string number boolean undefined function object 
@@ -74,7 +74,7 @@ function identifyType(val) {
 }
 }
 ```	
-###native js实现ajax
+### native js实现ajax
 运用用XMLHttpRequest对象的方法和事件实现，但需注意IE6-的兼容性。
 
 以下将其实现封装到一个构造函数中。
@@ -137,8 +137,8 @@ XMLHttp.prototype.send = function(url, method, async, data, fn) {
   }
 };
 ```
-##效果实现
-##变速动画（js）
+## 效果实现
+## 变速动画（js）
 实现思路：对所有属性变化设置一个定时器，并设置一个标志符来标记是否停止。
 
 ```
