@@ -1,4 +1,4 @@
-#移动端h5问题探索(1)支付密码输入框
+# 移动端h5问题探索(1)支付密码输入框
 **主要涉及问题**
 
 1. `input[type=tel]`与`input[type=number]`
@@ -10,8 +10,8 @@
 
 点击页面的按钮时发出请求，根据请求结果决定是否显示支付密码输入弹框（聚焦输入框调出数字键盘）。
 
-##思路解读
-1. ###input[type=tel]与input[type=number]
+## 思路解读
+1. ### input[type=tel]与input[type=number]
 	因为需要调出数字键盘，就排除了 `input[type=password]`，而 `input[type=tel]`或 `input[type=number]`均可调出数字键盘，但 `input[type=number]`可输入负数和小数点（且还有spin-button）。
 	
 	考虑到 `-webkit-text-security`在mobile的延迟，故需隐藏input，用元素显示圆点模拟（这样也方便调整样式）。
@@ -90,7 +90,7 @@
 	        border-bottom-right-radius 2px	
 	```
 
-2. ###event.preventDefault();
+2. ### event.preventDefault();
 	可在keydown方法中禁止键盘输入。移动端阻止默认事件支持 `event.preventDefault()`和 `event.returnValue=false`。
 	
 	**密码输入keydown监听方法**
@@ -108,12 +108,12 @@
       !flag && event.preventDefault();
     }
 	```
-3. ###关于document.activeElement.blur();
+3. ### 关于document.activeElement.blur();
 	`document.activeElement`可获取当前聚焦元素。
 
 	本来是为了解决ios自动focus()问题（这应该是ios的bug）查找到的，但不支持focus()的环境先调用blur()()也并无作用。因此elemnt.blur()基本不用。
 	
-4. ###ios自动focus()实现		
+4. ### ios自动focus()实现		
 	ios中调用focus()方法，document.activeElement会改变为设置的元素，但并不会因此调出键盘。解决方法为**在click方法中立即调用focus()， 不能有在timeout／异步请求等延时之后**。因此input输入框应一直在DOM中，显示在页面视线外。
 	
 	若需根据HTTP请求后的结果判断是否要focus()，故需改用同步请求。同时，不能在`timeout`方法后focus()，原理同异步请求。
@@ -159,7 +159,7 @@
 	    }
 	```
 	
-#实现方法
+# 实现方法
 
 使用了vue和jquery（主要用它的同步请求方法，若不需要改用vue-resource插件）[demo](https://julielee77.github.io/demo/0002.html)
 

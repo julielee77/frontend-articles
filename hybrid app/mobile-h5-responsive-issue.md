@@ -1,4 +1,4 @@
-#移动端h5适配问题
+# 移动端h5适配问题
 参考文章  
 
 [使用Flexible实现手淘H5页面的终端适配](https://github.com/amfe/article/issues/17)
@@ -26,7 +26,7 @@
     document.documentElement.setAttribute('data-dpr',window.devicePixelRatio|1);
 ```
 这样，之后就可以用html[data-dpr=*]写一些css hack了。
-#图片#
+# 图片
 应该适应使用高清多倍图片，最好不同的dpr适应不同的图片文件。
 假设以*750X1334*（iphone 6，*dpr=2*）做设计基准，有一个*400X600*的图，那么css只需写
 
@@ -40,7 +40,7 @@ img{
 
 **参考做法**：先切最大倍的图，然后用图片处理器等比缩放并命名，最后得到*3X* /*2X* /*1X*的图。
 （这里建议命名方式以 *imageName_1X.png*这种方式）
-#字体/间隙#
+# 字体/间隙
 为了在大屏下显示更多的内容，字体和有些间隙不适合用rem适配，可以写成固定或设定几个适配的px值。
 
 **参考做法**：写一个.mixin函数，然后设置css media query的时候调用。形如：
@@ -74,7 +74,7 @@ img{
     }
 }
 ```
-#其它控件#
+# 其它控件
 推荐用%、vw、vh或rem（font-size of the root element）单位。设置html的font-size（基准值），不同元素就可以根据设置的rem值自适应了。
 
 *元素的尺寸=px/基准值*
