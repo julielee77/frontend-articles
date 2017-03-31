@@ -80,7 +80,7 @@ IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug�
 	
 	获取节点时，Chrome、Firefox、IE9+等现代浏览器下，获取到的是ElementNode和TextNode，它会将空格符、回车符、换行符也看做文本节点，而IE8-则会无视空格、回车符。
 	
-<table>
+	<table>
     <caption>DOM操作相关属性／方法</caption>
     <tr>
       <th>功能</th>
