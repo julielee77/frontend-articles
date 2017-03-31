@@ -1,4 +1,4 @@
-#IE兼容性总结
+# IE兼容性总结
 （注：文中所涉及IE版本均包含自身。文中也会适当提及其它浏览器的兼容性。）
 ##概况
 IE9+基本已和chrome兼容性差不多，而IE7-市场占有率基本可不考虑，因此一般考虑的是IE8的兼容性。
@@ -6,10 +6,10 @@ IE9+基本已和chrome兼容性差不多，而IE7-市场占有率基本可不考
 目前最新的windows10默认浏览器已换成spartan，而IE11将不做重大修改，这预示着微软已自动放弃IE浏览器。
 
 补充：jquery框架1.X版本支持IE7-，解决了很多IE兼容性问题，且便于操作DOM。其2.X版本支持IE8+。
-##HTML/CSS兼容情况
+## HTML/CSS兼容情况
 IE8-一般不支持HTML5和CSS3，无特殊情况以下将不讨论。
-###HTML
-###CSS
+### HTML
+### CSS
 1. 外部样式
 
 	若外部样式文件中有中文注释，IE6-会导致其无法生效。可在css文件开头使用 `@charset "utf-8";`
@@ -60,8 +60,8 @@ IE8-一般不支持HTML5和CSS3，无特殊情况以下将不讨论。
 	```
 	
 
-##javascript兼容情况
-###核心JS
+## javascript兼容情况
+### 核心JS
 **IE8-一般不支持ES5＋。**
 
 1. ES5支持字符串索引访问
@@ -71,7 +71,7 @@ IE8-一般不支持HTML5和CSS3，无特殊情况以下将不讨论。
 	str[0]//IE7-不支持 =>str.charAt(0)
 	```
 
-###DOM
+### DOM
 IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug。
 
 1. 节点树和元素树
@@ -80,7 +80,7 @@ IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug�
 	
 	获取节点时，Chrome、Firefox、IE9+等现代浏览器下，获取到的是ElementNode和TextNode，它会将空格符、回车符、换行符也看做文本节点，而IE8-则会无视空格、回车符。
 	
-	<table>
+<table>
     <caption>DOM操作相关属性／方法</caption>
     <tr>
       <th>功能</th>
