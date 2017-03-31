@@ -1,4 +1,4 @@
-#css特殊元素／属性总结
+# css特殊元素／属性总结
 - [seletor](#selector)
 - [inheritance](#inheritance)
 - [box-model](#box-model)
@@ -8,7 +8,7 @@
 - [unusual attributes](#unusual-attributes)
 - [css3 features](#css3-features)
 
-##selectors
+## selectors
 元素的最终有效样式由选择器的层叠和权重决定。（《css权威指南》中sepecifity的解释方法，与此类似）
 
 选择器权重：（1）通用* 0.01（2）继承 0.1（3）标签 1（4）类 10（5）id 100（6）!important最高
@@ -120,7 +120,7 @@
 </table>
 >Note:表达式中的参数n也写作如:nth-child(odd)/:nth-child(even)，表示 奇数／偶数顺序元素。
 
-###:before,:after
+### :before,:after
 :before,:after插入的内容默认是一个行内元素，并且在HTML源代码中无法看到，这就是为什么被称之为伪元素的理由，所以也就无法通过DOM对其进行操作（可通过改变住元素的class）。
 ##inheritance
 基于继承机制，样式不仅应用到当前元素，还会应用到其后代元素，可合理应用。低版本浏览器继承会出现问题，且修复继承Bug还可能导致危险的问题。
@@ -135,7 +135,7 @@
 - 表格元素可继承： `border-collapse`
 - 不可继承的： `display`、`margin`、`border`、`padding`、`background`、`height`、`min-height`、`max-height`、`width`、`min-width`、`max-width`、`overflow`、`position`、`left`、`right`、`top`、 `bottom`、`z-index`、`float`、`clear`、`table-layout`、`vertical-align`、`page-break-after`、 `page-bread-before`和`unicode-bidi`
 
-##box-model
+## box-model
 注：普通某种类型元素，指无特殊定位／浮动等的非替换元素（img/input/button等）
 
 - ###inline元素
@@ -204,7 +204,7 @@
 	- `line-height: 36px`
 
 	建议设置 `line-height`为数值，它的子元素将根据其 `font-size`重新设置 `line-height`；其它情形则由像素值或计算出的像素值直接继承。	
-##positioning
+## positioning
 - ###position
 	1. relative
 		
@@ -235,7 +235,7 @@
 	
 	如果 `overflow`被设置为 `hidden`，元素的内容会在元素的边界处剪裁，不过不会提供滚动接口使用户访问到超出剪裁区域的内容。
 	
-##text
+## text
 - ###字体
 	css定义了5种通用字体系列，即serif/sans-serif/monospace/cursive/fantasy。一般情况下，设备上的任何字体都会归入其中的一类。因此定义fon-family时，应至少定义一种通用系列字体。
 	
@@ -268,8 +268,8 @@
 		
 		`inherit` 继承父级 
 		
-##color
-###background
+## color
+### background
 css3 增加了image相关的属性。
 
 css2的background简写：
