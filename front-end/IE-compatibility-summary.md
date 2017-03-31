@@ -95,11 +95,11 @@ IE5开始支持DOM 1级，直到IE5.5才完全支持。IE8开始修复DOM的bug�
       <td>`children`不包含TextNode。但IE6会包含CommentNode。  </td>
     </tr>
     <tr>
-    <tr>
       <td>获取兄弟节点</td>
       <td>nextSibling/previousSibling</td>
       <td></td>
     </tr>
+    <tr>
       <td>获取兄弟元素</td>
       <td>nextElementSibling/previousElementSibling</td>
       <td></td>
