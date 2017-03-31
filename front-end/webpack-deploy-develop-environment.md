@@ -1,4 +1,4 @@
-#webpack构建开发环境
+# webpack构建开发环境
 ## 安装webpack及相关组件
 1. 在设备上安装全局的webpack 
 
@@ -177,7 +177,7 @@ module.exports = {
 注：编译时，不会生成中间文件，如将Less作为style嵌入到html中，则不会生成对应的css文件。
 [loaders参考](http://webpack.github.io/docs/list-of-loaders.html)
 
-#插件的使用#
+# 插件的使用
 使用webpack模块的插件（webpack.XXXPlugin）需先在当前路径安装webpack
 
 ```
@@ -204,7 +204,7 @@ npm install extract-text-webpack-plugin
 - UglifyJsPlugin 代码丑化，建议开发过程中不开启
 
 
-#webpack模块引入的使用#
+# webpack模块引入的使用
 在html中直接引入webpack最终生成的js脚本即可。各脚本模块、样式文件、图片可以直接使用CommonJS来书写，并可以直接引入未编译的less/coffeeScript等。如：
 
 ```
@@ -219,7 +219,7 @@ require('!style!css!less!./style.less')
 ```
 
 
-#运行webpack#
+# 运行webpack
 
 ```
 webpack #使用默认的webpack.config.js编译
@@ -256,16 +256,16 @@ webpack -d 生成map映射文件（即模块最终打包到了哪里）
 webpack <entry> <output> --module-bind '后缀名=loaders列表' 
 ```
 
-#Development server#
+# Development server
 以监听模式自动运行webpack。
 
 可与react的react-hot-loader（不刷新同步显示修改的页面）配合使用，参见<http://www.jianshu.com/p/8adf4c2bfa51>。
 
-#实例#
+# 实例
 
 
 [multiple entry points](https://github.com/webpack/webpack/tree/master/examples/multiple-entry-points)
-#链接补充#
+# 链接补充
 webpack入门  [segmentFault传送门](http://segmentfault.com/a/1190000002551952)
 
 webpack使用优化 [gitHub issue传送门](https://github.com/lcxfs1991/blog/issues/2)
